@@ -37,7 +37,7 @@
             // lblTotalAmount
             // 
             this.lblTotalAmount.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalAmount.Location = new System.Drawing.Point(365, 26);
+            this.lblTotalAmount.Location = new System.Drawing.Point(331, 13);
             this.lblTotalAmount.Name = "lblTotalAmount";
             this.lblTotalAmount.Size = new System.Drawing.Size(72, 26);
             this.lblTotalAmount.TabIndex = 29;
@@ -47,7 +47,7 @@
             // lblQty
             // 
             this.lblQty.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQty.Location = new System.Drawing.Point(12, 26);
+            this.lblQty.Location = new System.Drawing.Point(15, 13);
             this.lblQty.Name = "lblQty";
             this.lblQty.Size = new System.Drawing.Size(55, 26);
             this.lblQty.TabIndex = 28;
@@ -57,7 +57,7 @@
             // lblPrice
             // 
             this.lblPrice.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(283, 26);
+            this.lblPrice.Location = new System.Drawing.Point(238, 13);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(63, 26);
             this.lblPrice.TabIndex = 27;
@@ -67,9 +67,9 @@
             // lblServiceName
             // 
             this.lblServiceName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServiceName.Location = new System.Drawing.Point(85, 26);
+            this.lblServiceName.Location = new System.Drawing.Point(76, 13);
             this.lblServiceName.Name = "lblServiceName";
-            this.lblServiceName.Size = new System.Drawing.Size(191, 26);
+            this.lblServiceName.Size = new System.Drawing.Size(133, 26);
             this.lblServiceName.TabIndex = 26;
             this.lblServiceName.Text = "name";
             this.lblServiceName.Visible = false;
@@ -82,9 +82,9 @@
             this.Controls.Add(this.lblQty);
             this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.lblServiceName);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AppointmentInvoiceLayout";
-            this.Size = new System.Drawing.Size(449, 76);
+            this.Size = new System.Drawing.Size(406, 39);
             this.ResumeLayout(false);
 
         }

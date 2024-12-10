@@ -46,13 +46,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.ServiceFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.label11 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Black", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(186, 11);
+            this.label1.Location = new System.Drawing.Point(157, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(163, 40);
@@ -63,7 +64,7 @@
             // 
             this.lblCustomerName.AutoSize = true;
             this.lblCustomerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerName.Location = new System.Drawing.Point(204, 115);
+            this.lblCustomerName.Location = new System.Drawing.Point(232, 104);
             this.lblCustomerName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCustomerName.Name = "lblCustomerName";
             this.lblCustomerName.Size = new System.Drawing.Size(13, 20);
@@ -74,7 +75,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(15, 115);
+            this.label3.Location = new System.Drawing.Point(43, 104);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(164, 24);
@@ -85,7 +86,7 @@
             // 
             this.lblAppointmentID.AutoSize = true;
             this.lblAppointmentID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppointmentID.Location = new System.Drawing.Point(204, 66);
+            this.lblAppointmentID.Location = new System.Drawing.Point(232, 59);
             this.lblAppointmentID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAppointmentID.Name = "lblAppointmentID";
             this.lblAppointmentID.Size = new System.Drawing.Size(13, 20);
@@ -96,7 +97,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(15, 66);
+            this.label2.Location = new System.Drawing.Point(43, 59);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(171, 24);
@@ -107,7 +108,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(15, 159);
+            this.label4.Location = new System.Drawing.Point(43, 148);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 24);
@@ -118,7 +119,7 @@
             // 
             this.lblPetName.AutoSize = true;
             this.lblPetName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPetName.Location = new System.Drawing.Point(204, 159);
+            this.lblPetName.Location = new System.Drawing.Point(232, 148);
             this.lblPetName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPetName.Name = "lblPetName";
             this.lblPetName.Size = new System.Drawing.Size(13, 20);
@@ -129,7 +130,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 209);
+            this.label6.Location = new System.Drawing.Point(43, 198);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(183, 24);
@@ -140,7 +141,7 @@
             // 
             this.lblAppointmentDate.AutoSize = true;
             this.lblAppointmentDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppointmentDate.Location = new System.Drawing.Point(204, 209);
+            this.lblAppointmentDate.Location = new System.Drawing.Point(232, 198);
             this.lblAppointmentDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAppointmentDate.Name = "lblAppointmentDate";
             this.lblAppointmentDate.Size = new System.Drawing.Size(13, 20);
@@ -151,7 +152,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(15, 264);
+            this.label8.Location = new System.Drawing.Point(43, 253);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(76, 24);
@@ -162,7 +163,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 318);
+            this.label9.Location = new System.Drawing.Point(43, 308);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(61, 24);
@@ -173,7 +174,7 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.Location = new System.Drawing.Point(204, 264);
+            this.lblStatus.Location = new System.Drawing.Point(232, 253);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(13, 20);
@@ -184,7 +185,7 @@
             // 
             this.lblStaff.AutoSize = true;
             this.lblStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStaff.Location = new System.Drawing.Point(204, 318);
+            this.lblStaff.Location = new System.Drawing.Point(232, 308);
             this.lblStaff.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStaff.Name = "lblStaff";
             this.lblStaff.Size = new System.Drawing.Size(13, 20);
@@ -195,7 +196,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(15, 374);
+            this.label12.Location = new System.Drawing.Point(15, 339);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(86, 24);
@@ -206,7 +207,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(58, 419);
+            this.label5.Location = new System.Drawing.Point(108, 363);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 24);
@@ -217,7 +218,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(189, 419);
+            this.label7.Location = new System.Drawing.Point(15, 363);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 24);
@@ -228,7 +229,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(320, 419);
+            this.label10.Location = new System.Drawing.Point(351, 363);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(81, 24);
@@ -238,17 +239,30 @@
             // ServiceFlowLayout
             // 
             this.ServiceFlowLayout.AutoScroll = true;
-            this.ServiceFlowLayout.Location = new System.Drawing.Point(19, 457);
+            this.ServiceFlowLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ServiceFlowLayout.Location = new System.Drawing.Point(19, 389);
             this.ServiceFlowLayout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ServiceFlowLayout.Name = "ServiceFlowLayout";
-            this.ServiceFlowLayout.Size = new System.Drawing.Size(417, 166);
+            this.ServiceFlowLayout.Size = new System.Drawing.Size(441, 132);
             this.ServiceFlowLayout.TabIndex = 63;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial Black", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(262, 363);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(58, 24);
+            this.label11.TabIndex = 64;
+            this.label11.Text = "Price";
             // 
             // ViewAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(448, 664);
+            this.ClientSize = new System.Drawing.Size(472, 532);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.ServiceFlowLayout);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
@@ -271,6 +285,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ViewAppointment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,5 +311,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.FlowLayoutPanel ServiceFlowLayout;
+        private System.Windows.Forms.Label label11;
     }
 }

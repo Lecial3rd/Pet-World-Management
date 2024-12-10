@@ -285,7 +285,7 @@ namespace PetWorldManagement.Appointments
             this.serviceLayout.Location = new System.Drawing.Point(523, 55);
             this.serviceLayout.Margin = new System.Windows.Forms.Padding(4);
             this.serviceLayout.Name = "serviceLayout";
-            this.serviceLayout.Size = new System.Drawing.Size(328, 304);
+            this.serviceLayout.Size = new System.Drawing.Size(345, 304);
             this.serviceLayout.TabIndex = 27;
             // 
             // panel4
@@ -297,7 +297,7 @@ namespace PetWorldManagement.Appointments
             this.panel4.Location = new System.Drawing.Point(523, 11);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(328, 44);
+            this.panel4.Size = new System.Drawing.Size(346, 44);
             this.panel4.TabIndex = 28;
             // 
             // label7

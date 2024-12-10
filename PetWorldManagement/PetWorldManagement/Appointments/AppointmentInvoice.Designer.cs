@@ -220,6 +220,7 @@
             this.Controls.Add(this.ServiceFlowLayout);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AppointmentInvoice";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InvoiceForm";
             this.ResumeLayout(false);
             this.PerformLayout();

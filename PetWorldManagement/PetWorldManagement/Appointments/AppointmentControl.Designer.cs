@@ -38,7 +38,7 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(329, 14);
+            this.txtQuantity.Location = new System.Drawing.Point(324, 14);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.ReadOnly = true;
@@ -50,7 +50,7 @@
             // btnRemove
             // 
             this.btnRemove.AutoSize = true;
-            this.btnRemove.Location = new System.Drawing.Point(387, 11);
+            this.btnRemove.Location = new System.Drawing.Point(382, 11);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(32, 28);
@@ -62,7 +62,7 @@
             // btnMinusQuantity
             // 
             this.btnMinusQuantity.AutoSize = true;
-            this.btnMinusQuantity.Location = new System.Drawing.Point(299, 11);
+            this.btnMinusQuantity.Location = new System.Drawing.Point(294, 11);
             this.btnMinusQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinusQuantity.Name = "btnMinusQuantity";
             this.btnMinusQuantity.Size = new System.Drawing.Size(28, 28);
@@ -73,7 +73,7 @@
             // btnAddQuantity
             // 
             this.btnAddQuantity.AutoSize = true;
-            this.btnAddQuantity.Location = new System.Drawing.Point(354, 11);
+            this.btnAddQuantity.Location = new System.Drawing.Point(349, 11);
             this.btnAddQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddQuantity.Name = "btnAddQuantity";
             this.btnAddQuantity.Size = new System.Drawing.Size(31, 28);
@@ -111,7 +111,7 @@
             this.Controls.Add(this.lblSName);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AppointmentControl";
-            this.Size = new System.Drawing.Size(447, 49);
+            this.Size = new System.Drawing.Size(420, 49);
             this.ResumeLayout(false);
             this.PerformLayout();
 

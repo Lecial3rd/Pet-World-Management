@@ -129,13 +129,28 @@ namespace PetWorldManagement
 
         private void dataGridViewAppointments_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0) // Ensure the row index is valid
             {
                 DataGridViewRow row = dataGridViewAppointments.Rows[e.RowIndex];
+
+                // Check if the ID cell is not null or empty
+                if (row.Cells["ID"].Value == null || row.Cells["ID"].Value == DBNull.Value)
+                {
+                    MessageBox.Show("Invalid appointment selected. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return; // Exit the method
+                }
+
                 int appointmentId = Convert.ToInt32(row.Cells["ID"].Value);
 
                 if (e.ColumnIndex == dataGridViewAppointments.Columns["View"].Index)
                 {
+                    // Check if the appointmentId is valid before opening the ViewAppointment form
+                    if (appointmentId <= 0)
+                    {
+                        MessageBox.Show("Invalid appointment selected. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return; // Exit the method
+                    }
+
                     // Open the ViewAppointment form to view details
                     ViewAppointment viewAppointmentForm = new ViewAppointment(appointmentId);
                     viewAppointmentForm.ShowDialog(); // Show the form as a dialog
@@ -149,6 +164,10 @@ namespace PetWorldManagement
                         LoadAppointments(); // Refresh grid after deletion
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("No valid row selected. Please select a valid appointment.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
