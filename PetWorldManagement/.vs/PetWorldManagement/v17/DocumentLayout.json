@@ -3,31 +3,31 @@
   "WorkspaceRootPath": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|c:\\users\\leopoldo\\documents\\github\\pet-world-management\\petworldmanagement\\petworldmanagement\\frontdesk\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\frontdesk\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\petworldmanagement\\frontdesk\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\frontdesk\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|c:\\users\\leopoldo\\documents\\github\\pet-world-management\\petworldmanagement\\petworldmanagement\\frontdesk\\appointment.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\frontdesk\\appointment.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\petworldmanagement\\appointments\\viewappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\appointments\\viewappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\petworldmanagement\\frontdesk\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\frontdesk\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\petworldmanagement\\repository\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\repository\\appointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|c:\\users\\leopoldo\\documents\\github\\pet-world-management\\petworldmanagement\\petworldmanagement\\appointments\\appointmentpageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\petworldmanagement\\appointments\\appointmentpageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\appointments\\appointmentpageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|c:\\users\\leopoldo\\documents\\github\\pet-world-management\\petworldmanagement\\petworldmanagement\\appointments\\appointmentpageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\petworldmanagement\\appointments\\viewappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\appointments\\viewappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\petworldmanagement\\frontdesk\\appointment.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\frontdesk\\appointment.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\petworldmanagement\\appointments\\appointmentpageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\appointments\\appointmentpageform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -43,11 +43,11 @@
       "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\appointments\\appointmentobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|c:\\users\\leopoldo\\documents\\github\\pet-world-management\\petworldmanagement\\petworldmanagement\\appointments\\appointmentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\petworldmanagement\\appointments\\appointmentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\appointments\\appointmentcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|c:\\users\\leopoldo\\documents\\github\\pet-world-management\\petworldmanagement\\petworldmanagement\\appointments\\addappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\petworldmanagement\\appointments\\addappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{16CDB47B-E01B-4FA9-8DC4-C8E07DA80CC9}|PetWorldManagement\\PetWorldManagement.csproj|solutionrelative:petworldmanagement\\appointments\\addappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -82,7 +82,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 74,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,20 +94,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Appointment.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\FrontDesk\\Appointment.Designer.cs",
-              "RelativeDocumentMoniker": "PetWorldManagement\\FrontDesk\\Appointment.Designer.cs",
-              "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\FrontDesk\\Appointment.Designer.cs",
-              "RelativeToolTip": "PetWorldManagement\\FrontDesk\\Appointment.Designer.cs",
-              "ViewState": "AgIAAC8CAAAAAAAAAAAYwDcCAABKAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "AppointmentPageForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\AppointmentPageForm.cs",
+              "RelativeDocumentMoniker": "PetWorldManagement\\Appointments\\AppointmentPageForm.cs",
+              "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\AppointmentPageForm.cs [Design]",
+              "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentPageForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:39:19.236Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T15:22:39.286Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "AppointmentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Repository\\AppointmentRepository.cs",
+              "RelativeDocumentMoniker": "PetWorldManagement\\Repository\\AppointmentRepository.cs",
+              "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Repository\\AppointmentRepository.cs",
+              "RelativeToolTip": "PetWorldManagement\\Repository\\AppointmentRepository.cs",
+              "ViewState": "AgIAAPUAAAAAAAAAAAAUwAsBAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:05:58.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Appointment.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\FrontDesk\\Appointment.cs",
               "RelativeDocumentMoniker": "PetWorldManagement\\FrontDesk\\Appointment.cs",
@@ -119,37 +129,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ViewAppointment.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\ViewAppointment.cs",
-              "RelativeDocumentMoniker": "PetWorldManagement\\Appointments\\ViewAppointment.cs",
-              "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\ViewAppointment.cs [Design]",
-              "RelativeToolTip": "PetWorldManagement\\Appointments\\ViewAppointment.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:56:37.008Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppointmentPageForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\AppointmentPageForm.cs",
-              "RelativeDocumentMoniker": "PetWorldManagement\\Appointments\\AppointmentPageForm.cs",
-              "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\AppointmentPageForm.cs [Design]",
-              "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentPageForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:22:39.286Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Appointment.cs",
               "DocumentMoniker": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\FrontDesk\\Appointment.cs",
               "RelativeDocumentMoniker": "PetWorldManagement\\FrontDesk\\Appointment.cs",
               "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\FrontDesk\\Appointment.cs",
               "RelativeToolTip": "PetWorldManagement\\FrontDesk\\Appointment.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAnwLYAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAH8BAAAAAAAAAAAQwJsBAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T13:59:42.746Z",
               "EditorCaption": ""
@@ -157,15 +143,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AppointmentRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Repository\\AppointmentRepository.cs",
-              "RelativeDocumentMoniker": "PetWorldManagement\\Repository\\AppointmentRepository.cs",
-              "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Repository\\AppointmentRepository.cs",
-              "RelativeToolTip": "PetWorldManagement\\Repository\\AppointmentRepository.cs",
-              "ViewState": "AgIAAPUAAAAAAAAAAAAUwAsBAAAlAAAAAAAAAA==",
+              "Title": "ViewAppointment.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\ViewAppointment.cs",
+              "RelativeDocumentMoniker": "PetWorldManagement\\Appointments\\ViewAppointment.cs",
+              "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\ViewAppointment.cs [Design]",
+              "RelativeToolTip": "PetWorldManagement\\Appointments\\ViewAppointment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:05:58.355Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T14:56:37.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Appointment.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\FrontDesk\\Appointment.Designer.cs",
+              "RelativeDocumentMoniker": "PetWorldManagement\\FrontDesk\\Appointment.Designer.cs",
+              "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\FrontDesk\\Appointment.Designer.cs",
+              "RelativeToolTip": "PetWorldManagement\\FrontDesk\\Appointment.Designer.cs",
+              "ViewState": "AgIAAC8CAAAAAAAAAAAYwDcCAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T15:39:19.236Z"
             },
             {
               "$type": "Document",
@@ -177,8 +173,7 @@
               "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentPageForm.cs",
               "ViewState": "AgIAAMwAAAAAAAAAAAAQwNUAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:13:45.955Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T15:13:45.955Z"
             },
             {
               "$type": "Document",
@@ -189,8 +184,7 @@
               "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\AppointmentInvoice.cs [Design]",
               "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentInvoice.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:58:16.209Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-10T13:58:16.209Z"
             },
             {
               "$type": "Document",
@@ -201,8 +195,7 @@
               "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\AppointmentInvoiceLayout.cs [Design]",
               "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentInvoiceLayout.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:00:56.203Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-10T14:00:56.203Z"
             },
             {
               "$type": "Document",
@@ -214,8 +207,7 @@
               "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentObject.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:25:22.331Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T14:25:22.331Z"
             },
             {
               "$type": "Document",
@@ -226,8 +218,7 @@
               "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\AppointmentControl.cs [Design]",
               "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentControl.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:05:39.417Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-10T15:05:39.417Z"
             },
             {
               "$type": "Document",
@@ -238,8 +229,7 @@
               "ToolTip": "C:\\Users\\Leopoldo\\Documents\\GitHub\\Pet-World-Management\\PetWorldManagement\\PetWorldManagement\\Appointments\\AddAppointment.cs [Design]",
               "RelativeToolTip": "PetWorldManagement\\Appointments\\AddAppointment.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T15:01:37.308Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-10T15:01:37.308Z"
             },
             {
               "$type": "Document",
@@ -251,8 +241,7 @@
               "RelativeToolTip": "PetWorldManagement\\Appointments\\ViewAppointment.cs",
               "ViewState": "AgIAAEEAAAAAAAAAAAAnwE0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:56:40.18Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T14:56:40.18Z"
             },
             {
               "$type": "Document",
@@ -264,8 +253,7 @@
               "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentInvoiceLayout.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:01:25.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T14:01:25.021Z"
             },
             {
               "$type": "Document",
@@ -277,8 +265,7 @@
               "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentInvoiceLayout.Designer.cs",
               "ViewState": "AgIAADEAAAAAAAAAAAAYwEAAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:02:03.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T14:02:03.385Z"
             },
             {
               "$type": "Document",
@@ -290,8 +277,7 @@
               "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentInvoice.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAQwEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T13:59:16.455Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T13:59:16.455Z"
             },
             {
               "$type": "Document",
@@ -303,8 +289,7 @@
               "RelativeToolTip": "PetWorldManagement\\Appointments\\AppointmentInvoice.Designer.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAQwPYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:00:36.19Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-10T14:00:36.19Z"
             },
             {
               "$type": "Document",

@@ -231,8 +231,6 @@ namespace PetWorldManagement
             ValidatePayButton(); // Recheck button state
         }
 
-
-
         private void txtAppID_TextChanged(object sender, EventArgs e)
         {
             if (int.TryParse(txtAppID.Text, out int appointmentId))
@@ -291,7 +289,8 @@ namespace PetWorldManagement
                 btnPay.Enabled = false; // Disable Pay button for invalid input
             }
 
-            // No need to call ValidatePayButton() here if the appointment is completed
+            // Always validate the Pay button state after changing the appointment ID
+            ValidatePayButton();
         }
 
         private void ValidatePayButton()
@@ -300,8 +299,19 @@ namespace PetWorldManagement
             bool isStaffSelected = !string.IsNullOrEmpty(lblFrontDeskName.Text.Trim());
             bool isAppointmentValid = !string.IsNullOrEmpty(lblCustomerName.Text.Trim()) && !string.IsNullOrEmpty(lblPetName.Text.Trim());
 
-            // Enable btnPay only if both conditions are met
-            btnPay.Enabled = isStaffSelected && isAppointmentValid;
+            // Check if the current appointment is not completed
+            bool isAppointmentNotCompleted = true;
+            if (int.TryParse(txtAppID.Text, out int appointmentId))
+            {
+                AppointmentObject appointment = appointmentRepository.GetAppointmentById(appointmentId);
+                if (appointment != null)
+                {
+                    isAppointmentNotCompleted = appointment.StatusID != 4; // Assuming 4 is the ID for "Completed"
+                }
+            }
+
+            // Enable btnPay only if all conditions are met
+            btnPay.Enabled = isStaffSelected && isAppointmentValid && isAppointmentNotCompleted;
         }
 
         private int GetCurrentStaffId()
