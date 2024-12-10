@@ -42,12 +42,10 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.lblStaff = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.lblServiceName = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.lblAmount = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.ServiceFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // label1
@@ -204,39 +202,6 @@
             this.label12.TabIndex = 56;
             this.label12.Text = "Service:";
             // 
-            // lblServiceName
-            // 
-            this.lblServiceName.AutoSize = true;
-            this.lblServiceName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblServiceName.Location = new System.Drawing.Point(63, 443);
-            this.lblServiceName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblServiceName.Name = "lblServiceName";
-            this.lblServiceName.Size = new System.Drawing.Size(13, 20);
-            this.lblServiceName.TabIndex = 57;
-            this.lblServiceName.Text = ".";
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.AutoSize = true;
-            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(189, 443);
-            this.lblQuantity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(13, 20);
-            this.lblQuantity.TabIndex = 58;
-            this.lblQuantity.Text = ".";
-            // 
-            // lblAmount
-            // 
-            this.lblAmount.AutoSize = true;
-            this.lblAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAmount.Location = new System.Drawing.Point(320, 443);
-            this.lblAmount.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAmount.Name = "lblAmount";
-            this.lblAmount.Size = new System.Drawing.Size(13, 20);
-            this.lblAmount.TabIndex = 59;
-            this.lblAmount.Text = ".";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -270,17 +235,24 @@
             this.label10.TabIndex = 62;
             this.label10.Text = "Amount";
             // 
+            // ServiceFlowLayout
+            // 
+            this.ServiceFlowLayout.AutoScroll = true;
+            this.ServiceFlowLayout.Location = new System.Drawing.Point(19, 457);
+            this.ServiceFlowLayout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ServiceFlowLayout.Name = "ServiceFlowLayout";
+            this.ServiceFlowLayout.Size = new System.Drawing.Size(417, 166);
+            this.ServiceFlowLayout.TabIndex = 63;
+            // 
             // ViewAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 540);
+            this.ClientSize = new System.Drawing.Size(448, 664);
+            this.Controls.Add(this.ServiceFlowLayout);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.lblAmount);
-            this.Controls.Add(this.lblQuantity);
-            this.Controls.Add(this.lblServiceName);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.lblStaff);
             this.Controls.Add(this.lblStatus);
@@ -320,11 +292,9 @@
         public System.Windows.Forms.Label lblStatus;
         public System.Windows.Forms.Label lblStaff;
         private System.Windows.Forms.Label label12;
-        public System.Windows.Forms.Label lblServiceName;
-        public System.Windows.Forms.Label lblQuantity;
-        public System.Windows.Forms.Label lblAmount;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
+        public System.Windows.Forms.FlowLayoutPanel ServiceFlowLayout;
     }
 }

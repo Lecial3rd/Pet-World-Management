@@ -100,6 +100,12 @@ namespace PetWorldManagement.Appointments
         {
             try
             {
+                if (dtp_Appointment.Value <= DateTime.Now)
+                {
+                    MessageBox.Show("Appointment date cannot be in the past or current date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
                 // Check if the serviceLayout is empty
                 if (serviceLayout.Controls.Count == 0)
                 {

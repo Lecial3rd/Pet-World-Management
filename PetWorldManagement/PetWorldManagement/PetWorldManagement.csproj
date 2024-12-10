@@ -58,6 +58,18 @@
     <Compile Include="Appointments\AppointmentControl.Designer.cs">
       <DependentUpon>AppointmentControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Appointments\AppointmentInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointments\AppointmentInvoice.Designer.cs">
+      <DependentUpon>AppointmentInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointments\AppointmentInvoiceLayout.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Appointments\AppointmentInvoiceLayout.Designer.cs">
+      <DependentUpon>AppointmentInvoiceLayout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Appointments\AppointmentObject.cs" />
     <Compile Include="Appointments\AppointmentPageForm.cs">
       <SubType>Form</SubType>
@@ -240,6 +252,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Appointments\AppointmentControl.resx">
       <DependentUpon>AppointmentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\AppointmentInvoice.resx">
+      <DependentUpon>AppointmentInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\AppointmentInvoiceLayout.resx">
+      <DependentUpon>AppointmentInvoiceLayout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Appointments\ViewAppointment.resx">
       <DependentUpon>ViewAppointment.cs</DependentUpon>

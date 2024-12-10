@@ -1,6 +1,6 @@
-﻿namespace PetWorldManagement.POS
+﻿namespace PetWorldManagement.Appointments
 {
-    partial class InvoiceForm
+    partial class AppointmentInvoice
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.label6 = new System.Windows.Forms.Label();
-            this.changelbl = new System.Windows.Forms.Label();
+            this.lblChange = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cshrcvlbl = new System.Windows.Forms.Label();
-            this.lblDR = new System.Windows.Forms.Label();
+            this.lblCashReceive = new System.Windows.Forms.Label();
+            this.lbldiscountRate = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.discountrate = new System.Windows.Forms.Label();
             this.lblInvoiceDate = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblInvoiceID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblTAmount = new System.Windows.Forms.Label();
+            this.lblTotalAmount = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.InvoiceFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
+            this.ServiceFlowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.SuspendLayout();
             // 
             // label6
@@ -55,15 +55,15 @@
             this.label6.TabIndex = 48;
             this.label6.Text = "Total:";
             // 
-            // changelbl
+            // lblChange
             // 
-            this.changelbl.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.changelbl.Location = new System.Drawing.Point(101, 730);
-            this.changelbl.Name = "changelbl";
-            this.changelbl.Size = new System.Drawing.Size(356, 25);
-            this.changelbl.TabIndex = 47;
-            this.changelbl.Text = "..";
-            this.changelbl.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            this.lblChange.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChange.Location = new System.Drawing.Point(101, 730);
+            this.lblChange.Name = "lblChange";
+            this.lblChange.Size = new System.Drawing.Size(356, 25);
+            this.lblChange.TabIndex = 47;
+            this.lblChange.Text = "..";
+            this.lblChange.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // label5
             // 
@@ -75,25 +75,25 @@
             this.label5.TabIndex = 46;
             this.label5.Text = "Change:";
             // 
-            // cshrcvlbl
+            // lblCashReceive
             // 
-            this.cshrcvlbl.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cshrcvlbl.Location = new System.Drawing.Point(161, 647);
-            this.cshrcvlbl.Name = "cshrcvlbl";
-            this.cshrcvlbl.Size = new System.Drawing.Size(297, 32);
-            this.cshrcvlbl.TabIndex = 45;
-            this.cshrcvlbl.Text = "..";
-            this.cshrcvlbl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblCashReceive.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCashReceive.Location = new System.Drawing.Point(158, 647);
+            this.lblCashReceive.Name = "lblCashReceive";
+            this.lblCashReceive.Size = new System.Drawing.Size(297, 32);
+            this.lblCashReceive.TabIndex = 45;
+            this.lblCashReceive.Text = "..";
+            this.lblCashReceive.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblDR
+            // lbldiscountRate
             // 
-            this.lblDR.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDR.Location = new System.Drawing.Point(141, 612);
-            this.lblDR.Name = "lblDR";
-            this.lblDR.Size = new System.Drawing.Size(317, 25);
-            this.lblDR.TabIndex = 44;
-            this.lblDR.Text = "..";
-            this.lblDR.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbldiscountRate.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbldiscountRate.Location = new System.Drawing.Point(141, 612);
+            this.lbldiscountRate.Name = "lbldiscountRate";
+            this.lbldiscountRate.Size = new System.Drawing.Size(317, 25);
+            this.lbldiscountRate.TabIndex = 44;
+            this.lbldiscountRate.Text = "..";
+            this.lbldiscountRate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
@@ -155,16 +155,15 @@
             this.label2.TabIndex = 38;
             this.label2.Text = "Invoice ID:";
             // 
-            // lblTAmount
+            // lblTotalAmount
             // 
-            this.lblTAmount.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTAmount.Location = new System.Drawing.Point(165, 679);
-            this.lblTAmount.Name = "lblTAmount";
-            this.lblTAmount.Size = new System.Drawing.Size(297, 38);
-            this.lblTAmount.TabIndex = 37;
-            this.lblTAmount.Text = "0.00";
-            this.lblTAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.lblTAmount.Visible = false;
+            this.lblTotalAmount.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalAmount.Location = new System.Drawing.Point(165, 679);
+            this.lblTotalAmount.Name = "lblTotalAmount";
+            this.lblTotalAmount.Size = new System.Drawing.Size(297, 38);
+            this.lblTotalAmount.TabIndex = 37;
+            this.lblTotalAmount.Text = "0.00";
+            this.lblTotalAmount.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnPrint
             // 
@@ -190,37 +189,37 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Pet World";
             // 
-            // InvoiceFlowLayout
+            // ServiceFlowLayout
             // 
-            this.InvoiceFlowLayout.AutoScroll = true;
-            this.InvoiceFlowLayout.Location = new System.Drawing.Point(9, 121);
-            this.InvoiceFlowLayout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.InvoiceFlowLayout.Name = "InvoiceFlowLayout";
-            this.InvoiceFlowLayout.Size = new System.Drawing.Size(449, 479);
-            this.InvoiceFlowLayout.TabIndex = 34;
+            this.ServiceFlowLayout.AutoScroll = true;
+            this.ServiceFlowLayout.Location = new System.Drawing.Point(9, 121);
+            this.ServiceFlowLayout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ServiceFlowLayout.Name = "ServiceFlowLayout";
+            this.ServiceFlowLayout.Size = new System.Drawing.Size(449, 479);
+            this.ServiceFlowLayout.TabIndex = 34;
             // 
-            // InvoiceForm
+            // AppointmentInvoice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 800);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.changelbl);
+            this.Controls.Add(this.lblChange);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cshrcvlbl);
-            this.Controls.Add(this.lblDR);
+            this.Controls.Add(this.lblCashReceive);
+            this.Controls.Add(this.lbldiscountRate);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.discountrate);
             this.Controls.Add(this.lblInvoiceDate);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblInvoiceID);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.lblTAmount);
+            this.Controls.Add(this.lblTotalAmount);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.InvoiceFlowLayout);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "InvoiceForm";
+            this.Controls.Add(this.ServiceFlowLayout);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "AppointmentInvoice";
             this.Text = "InvoiceForm";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -230,19 +229,19 @@
         #endregion
 
         private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.Label changelbl;
+        public System.Windows.Forms.Label lblChange;
         private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Label cshrcvlbl;
-        public System.Windows.Forms.Label lblDR;
+        public System.Windows.Forms.Label lblCashReceive;
+        public System.Windows.Forms.Label lbldiscountRate;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label discountrate;
         public System.Windows.Forms.Label lblInvoiceDate;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.Label lblInvoiceID;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.Label lblTAmount;
+        public System.Windows.Forms.Label lblTotalAmount;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.FlowLayoutPanel InvoiceFlowLayout;
+        public System.Windows.Forms.FlowLayoutPanel ServiceFlowLayout;
     }
 }

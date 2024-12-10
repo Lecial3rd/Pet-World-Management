@@ -280,6 +280,7 @@ namespace PetWorldManagement.Appointments
             // 
             // serviceLayout
             // 
+            this.serviceLayout.AutoScroll = true;
             this.serviceLayout.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.serviceLayout.Location = new System.Drawing.Point(523, 55);
             this.serviceLayout.Margin = new System.Windows.Forms.Padding(4);

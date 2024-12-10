@@ -46,26 +46,33 @@ namespace PetWorldManagement.Appointments
 
         private void LoadAppointmentServices(int appointmentId)
         {
-            // Clear previous values
-            lblServiceName.Text = string.Empty;
-            lblQuantity.Text = string.Empty;
-            lblAmount.Text = string.Empty;
+            ServiceFlowLayout.Controls.Clear();
 
-            // Fetch and display the services associated with the appointment
             DataTable services = appointmentRepository.GetAppointmentServices(appointmentId);
 
-            // Assuming you have labels or a list to display the services
             foreach (DataRow row in services.Rows)
             {
-                // Trim the values to remove any leading or trailing whitespace
-                string serviceName = row["ServiceName"].ToString().Trim();
-                string quantity = row["Quantity"].ToString().Trim();
-                string totalAmount = Convert.ToDecimal(row["TotalAmount"]).ToString("C").Trim(); // Format as currency
+                int serviceId = Convert.ToInt32(row["ServiceID"]); // This should now work
+                int quantity = Convert.ToInt32(row["Quantity"]);
+                decimal totalAmount = Convert.ToDecimal(row["TotalAmount"]);
 
-                // Display service details
-                lblServiceName.Text += serviceName + "\n";
-                lblQuantity.Text += quantity + "\n";
-                lblAmount.Text += totalAmount + "\n";
+                // Create a new instance of AppointmentInvoiceLayout
+                AppointmentInvoiceLayout layout = new AppointmentInvoiceLayout();
+
+                // Set the values for the layout
+                layout.lblServiceName.Text = row["ServiceName"].ToString(); // Use the ServiceName from the DataRow
+                layout.lblQty.Text = quantity.ToString();
+                layout.lblPrice.Text = appointmentRepository.GetServicePrice(serviceId).ToString("C"); // Format as currency
+                layout.lblTotalAmount.Text = totalAmount.ToString("C"); // Format as currency
+
+                // Make the labels visible
+                layout.lblServiceName.Visible = true;
+                layout.lblQty.Visible = true;
+                layout.lblPrice.Visible = true;
+                layout.lblTotalAmount.Visible = true;
+
+                // Add the layout to the ServiceFlowLayout
+                ServiceFlowLayout.Controls.Add(layout);
             }
         }
     }
