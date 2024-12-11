@@ -1,15 +1,20 @@
 ﻿using System;
+using System.Data;
 using System.Windows.Forms;
+using PetWorldManagement.Repository;
 
 namespace PetWorldManagement.Appointments
 {
     public partial class AppointmentControl : UserControl
     {
         private bool isUpdatingQuantity = false; // Flag for quantity updates
+        private readonly AppointmentRepository _appointmentRepository; // Add a field for the repository
 
         public AppointmentControl()
         {
             InitializeComponent();
+            _appointmentRepository = new AppointmentRepository(); // Initialize the repository
+
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -71,9 +76,26 @@ namespace PetWorldManagement.Appointments
 
         private decimal GetServicePrice(string serviceName)
         {
-            // Implement logic to retrieve the price based on the service name
-            // This could be a call to a repository or a static list of services
-            return 50; // Placeholder for testing; replace with actual logic
+            // Use the repository to get the service ID first
+            int serviceId = GetServiceIdByName(serviceName);
+            if (serviceId != -1)
+            {
+                return _appointmentRepository.GetServicePrice(serviceId); // Get the actual price from the repository
+            }
+            return 0; // Default if not found
+        }
+
+        private int GetServiceIdByName(string serviceName)
+        {
+            DataTable serviceData = _appointmentRepository.GetServiceData();
+            foreach (DataRow row in serviceData.Rows)
+            {
+                if (row["ServiceName"].ToString() == serviceName)
+                {
+                    return (int)row["ServiceID"];
+                }
+            }
+            return -1; // Return -1 if not found
         }
 
         private void txtQuantity_TextChanged(object sender, EventArgs e)
