@@ -46,7 +46,7 @@
             // txt_Product
             // 
             this.txt_Product.BackColor = System.Drawing.Color.Transparent;
-            this.txt_Product.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Product.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Product.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txt_Product.Location = new System.Drawing.Point(10, 6);
             this.txt_Product.Name = "txt_Product";
@@ -57,7 +57,7 @@
             // 
             // txtqty_left
             // 
-            this.txtqty_left.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtqty_left.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtqty_left.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.txtqty_left.Location = new System.Drawing.Point(656, 6);
             this.txtqty_left.Name = "txtqty_left";

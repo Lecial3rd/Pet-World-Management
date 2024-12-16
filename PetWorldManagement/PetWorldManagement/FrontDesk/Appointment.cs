@@ -5,6 +5,8 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using PetWorldManagement.Appointments; // Ensure this is included
+using PetWorldManagement.Invoice;
+using PetWorldManagement.POS;
 using PetWorldManagement.Repository;
 
 namespace PetWorldManagement
@@ -95,29 +97,22 @@ namespace PetWorldManagement
                 {
                     Name = "View",
                     Text = "VIEW",
-                    UseColumnTextForButtonValue = true
+                    UseColumnTextForButtonValue = true,
+                    DefaultCellStyle = new DataGridViewCellStyle
+                    {
+                        Font = new Font("Arial", 10, FontStyle.Regular),
+                        Alignment = DataGridViewContentAlignment.MiddleCenter
+                    }
                 };
                 dataGridViewAppointments.Columns.Add(viewButton);
             }
 
-            // Add Delete button column if it doesn't exist
-            if (dataGridViewAppointments.Columns["Delete"] == null)
-            {
-                DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn
-                {
-                    Name = "Delete",
-                    Text = "DELETE",
-                    UseColumnTextForButtonValue = true
-                };
-                dataGridViewAppointments.Columns.Add(deleteButton);
-            }
-
-            // Ensure the buttons are the last columns
-            dataGridViewAppointments.Columns["View"].DisplayIndex = dataGridViewAppointments.Columns.Count - 2;
-            dataGridViewAppointments.Columns["Delete"].DisplayIndex = dataGridViewAppointments.Columns.Count - 1;
+            // Ensure the button is the last column
+            dataGridViewAppointments.Columns["View"].DisplayIndex = dataGridViewAppointments.Columns.Count - 1;
 
             AutoSizeGridColumns();
         }
+
 
         private void AutoSizeGridColumns()
         {
@@ -155,15 +150,6 @@ namespace PetWorldManagement
                     ViewAppointment viewAppointmentForm = new ViewAppointment(appointmentId);
                     viewAppointmentForm.ShowDialog(); // Show the form as a dialog
                 }
-                else if (e.ColumnIndex == dataGridViewAppointments.Columns["Delete"].Index)
-                {
-                    var confirmResult = MessageBox.Show("Are you sure to delete this appointment?", "Confirm Delete", MessageBoxButtons.YesNo);
-                    if (confirmResult == DialogResult.Yes)
-                    {
-                        appointmentRepository.Delete(appointmentId);
-                        LoadAppointments(); // Refresh grid after deletion
-                    }
-                }
             }
             else
             {
@@ -174,8 +160,8 @@ namespace PetWorldManagement
         private void btnBook_Click(object sender, EventArgs e)
         {
             AddAppointment addAppointmentForm = new AddAppointment();
-            addAppointmentForm.ShowDialog(); // Show the form as a dialog
-            LoadAppointments(); // Refresh the appointments after adding a new one
+            addAppointmentForm.ShowDialog(); 
+            LoadAppointments(); 
         }
 
         private void txtSearchBox_TextChanged(object sender, EventArgs e)
@@ -338,10 +324,13 @@ namespace PetWorldManagement
 
                 // Calculate total amount (you may already have this in lblTotalPrice)
                 decimal totalAmount = decimal.Parse(lblTotalPrice.Text);
-                decimal discountRate = string.IsNullOrEmpty(txtboxDiscount.Text) ? 0 : decimal.Parse(txtboxDiscount.Text);
+                decimal discountRate = string.IsNullOrEmpty(txtboxDiscount.Text) ? 0 : decimal.Parse(txtboxDiscount.Text) / 100; // Convert to percentage
+
+                // Calculate the discount amount
+                decimal discountAmount = totalAmount * discountRate;
 
                 // Calculate the effective total amount after discount
-                decimal effectiveTotalAmount = totalAmount - discountRate;
+                decimal effectiveTotalAmount = totalAmount - discountAmount;
 
                 // Validate cashReceived input
                 if (!decimal.TryParse(txtReceived.Text, out decimal cashReceived))
@@ -373,7 +362,7 @@ namespace PetWorldManagement
                     staffId: GetCurrentStaffId(),
                     totalQuantitySold: totalQuantitySold, // Use the calculated total service quantity
                     totalPrice: effectiveTotalAmount, // Use the effective total amount after discount
-                    discountRate: discountRate,
+                    discountRate: discountRate * 100, // Store the discount rate as a percentage
                     paymentMethod: "Cash", // Assuming cash payment
                     change: change
                 );
@@ -387,17 +376,13 @@ namespace PetWorldManagement
                     totalAmount: effectiveTotalAmount // Use the effective total amount for the invoice
                 );
 
+                // Receipt
+                DisplayInvoiceAppointment(appointmentId);
+
                 // Update the appointment status to completed
                 appointmentRepository.UpdateAppointmentStatus(appointmentId, 4);
 
-                // Step 4: Open the AppointmentInvoice form and pass additional data
-                AppointmentInvoice invoiceForm = new AppointmentInvoice(appointmentId, discountRate, cashReceived, effectiveTotalAmount, change);
-                invoiceForm.ShowDialog(); // Show the invoice form as a dialog
-
-                // Refresh the appointments after payment
                 LoadAppointments();
-
-                // Clear input fields and labels after successful payment
                 ClearInputFields();
             }
             else
@@ -405,6 +390,96 @@ namespace PetWorldManagement
                 MessageBox.Show("Invalid Appointment ID.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void DisplayInvoiceAppointment(int appointmentID)
+        {
+            InvoiceAppointmentForm invoice = new InvoiceAppointmentForm();
+
+            SqlConnection conn = DatabaseConn.getInstance().GetConnection();
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+
+                string query = @"SELECT 
+                            app.AppointmentID,
+                            app.CustomerName,
+                            app.PetName,
+                            apps.ServiceName, 
+                            apps.Quantity,
+                            apps.Price,
+                            inv.TotalAmount as TotalPrice,
+                            st.Change,
+                            st.DiscountRate,
+                            (st.Change + st.TotalPrice) as CashReceived,
+                            st.PaymentMethod
+                        FROM 
+                            AppointmentService apps
+                        INNER JOIN Services s ON apps.ServiceID = s.ServiceID
+                        INNER JOIN Appointment app on apps.AppointmentID = app.AppointmentID
+                        INNER JOIN Invoices inv on app.AppointmentID = inv.AppointmentID
+                        INNER JOIN SalesTransactions st on inv.TransactionID = st.TransactionID
+                        WHERE apps.AppointmentID = @AppointmentID";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@AppointmentID", appointmentID);
+
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        bool isInvoiceDetailsFetched = false;
+                        decimal grandtotal = 0;
+                        while (reader.Read())
+                        {
+                            if (!isInvoiceDetailsFetched)
+                            {
+                                invoice.lblInvoiceID.Text = reader.GetInt32(0).ToString();
+                                invoice.lblCustomer.Text = reader.GetString(1);
+                                invoice.lblPet.Text = reader.GetString(2);
+                                invoice.lblInvoiceDate.Text = DateTime.Now.ToString("MMMM dd, yyyy");
+
+                                decimal totalPrice = reader.GetDecimal(6);
+                                int discountRate = Convert.ToInt32(reader.GetDecimal(8));
+                                decimal dbChange = reader.GetDecimal(7);
+                                decimal cashReceived = reader.GetDecimal(9);
+                                grandtotal+= reader.GetDecimal(6);
+
+                                invoice.lblDR.Text = discountRate.ToString();
+                                invoice.lblTAmount.Text = "₱" + grandtotal.ToString("N2");
+                                invoice.cshrcvlbl.Text = "₱" + cashReceived.ToString("N2");
+                                invoice.changelbl.Text = "₱" + dbChange.ToString("N2");
+                                invoice.paymentMethod.Text = reader.GetString(10);
+
+                                invoice.lblTAmount.Visible = true;
+                                isInvoiceDetailsFetched = true;
+                            }
+
+                            string serviceName = reader.GetString(3);
+                            int quantity = reader.GetInt32(4);
+                            decimal price = reader.GetDecimal(5);
+                            decimal subtotal = quantity * price;
+
+                            InvoiceLayout invoiceItemLayout = new InvoiceLayout();
+                            invoiceItemLayout.ShowInvoiceLayout(serviceName, price, quantity, (double)subtotal);
+                            invoice.InvoiceFlowLayout.Controls.Add(invoiceItemLayout);
+                            invoice.InvoiceFlowLayout.Controls.Add(invoice.summaryPNL);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+
+            invoice.Show();
+        }
+
 
         private void ClearInputFields()
         {
@@ -417,6 +492,16 @@ namespace PetWorldManagement
             lblTotalService.Text = "0";
             lblTotalPrice.Text = "0.00";
             btnPay.Enabled = false; // Disable Pay button after clearing
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

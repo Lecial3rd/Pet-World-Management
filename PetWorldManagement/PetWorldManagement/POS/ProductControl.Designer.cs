@@ -38,7 +38,7 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(275, 11);
+            this.txtQuantity.Location = new System.Drawing.Point(275, 18);
             this.txtQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.ReadOnly = true;
@@ -50,7 +50,7 @@
             // btnRemove
             // 
             this.btnRemove.AutoSize = true;
-            this.btnRemove.Location = new System.Drawing.Point(319, 9);
+            this.btnRemove.Location = new System.Drawing.Point(319, 16);
             this.btnRemove.Margin = new System.Windows.Forms.Padding(2);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(24, 23);
@@ -62,7 +62,7 @@
             // btnMinusProduct
             // 
             this.btnMinusProduct.AutoSize = true;
-            this.btnMinusProduct.Location = new System.Drawing.Point(253, 9);
+            this.btnMinusProduct.Location = new System.Drawing.Point(253, 16);
             this.btnMinusProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinusProduct.Name = "btnMinusProduct";
             this.btnMinusProduct.Size = new System.Drawing.Size(21, 23);
@@ -74,7 +74,7 @@
             // btnAddQuantity
             // 
             this.btnAddQuantity.AutoSize = true;
-            this.btnAddQuantity.Location = new System.Drawing.Point(294, 9);
+            this.btnAddQuantity.Location = new System.Drawing.Point(294, 16);
             this.btnAddQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddQuantity.Name = "btnAddQuantity";
             this.btnAddQuantity.Size = new System.Drawing.Size(23, 23);
@@ -86,7 +86,8 @@
             // lblprice
             // 
             this.lblprice.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblprice.Location = new System.Drawing.Point(164, 9);
+            this.lblprice.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblprice.Location = new System.Drawing.Point(164, 16);
             this.lblprice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblprice.Name = "lblprice";
             this.lblprice.Size = new System.Drawing.Size(85, 19);
@@ -97,7 +98,8 @@
             // lblPName
             // 
             this.lblPName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPName.Location = new System.Drawing.Point(7, 9);
+            this.lblPName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblPName.Location = new System.Drawing.Point(7, 16);
             this.lblPName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPName.Name = "lblPName";
             this.lblPName.Size = new System.Drawing.Size(153, 19);

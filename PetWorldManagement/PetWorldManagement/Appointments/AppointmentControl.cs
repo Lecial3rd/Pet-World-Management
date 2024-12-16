@@ -42,6 +42,12 @@ namespace PetWorldManagement.Appointments
             lblamount.Visible = true; // Make sure the amount label is visible
         }
 
+        public void SetPrice(decimal amount)
+        {
+            lblPrice.Text = amount.ToString("F2");
+            lblPrice.Visible = false; // Make sure the amount label is visible
+        }
+
         public void UpdateQuantity(int change)
         {
             if (isUpdatingQuantity) return; // Prevent re-entrance

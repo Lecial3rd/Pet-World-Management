@@ -46,34 +46,45 @@ namespace PetWorldManagement.Appointments
 
         private void LoadAppointmentServices(int appointmentId)
         {
-            ServiceFlowLayout.Controls.Clear();
-
-            DataTable services = appointmentRepository.GetAppointmentServices(appointmentId);
-
-            foreach (DataRow row in services.Rows)
+            try
             {
-                int serviceId = Convert.ToInt32(row["ServiceID"]); // This should now work
-                int quantity = Convert.ToInt32(row["Quantity"]);
-                decimal totalAmount = Convert.ToDecimal(row["TotalAmount"]);
+                // Retrieve appointment services from the database
+                DataTable services = appointmentRepository.GetAppointmentServices(appointmentId);
 
-                // Create a new instance of AppointmentInvoiceLayout
-                AppointmentInvoiceLayout layout = new AppointmentInvoiceLayout();
 
-                // Set the values for the layout
-                layout.lblServiceName.Text = row["ServiceName"].ToString(); // Use the ServiceName from the DataRow
-                layout.lblQty.Text = quantity.ToString();
-                layout.lblPrice.Text = appointmentRepository.GetServicePrice(serviceId).ToString("C"); // Format as currency
-                layout.lblTotalAmount.Text = totalAmount.ToString("C"); // Format as currency
+                // Iterate through the rows in the DataTable
+                foreach (DataRow row in services.Rows)
+                {
+                    // Extract data from the current row
+                    string serviceName = row["ServiceName"].ToString();
+                    int quantity = Convert.ToInt32(row["Quantity"]);
+                    decimal price = Convert.ToDecimal(row["Price"]);
+                    decimal totalAmount = Convert.ToDecimal(row["TotalAmount"]);
 
-                // Make the labels visible
-                layout.lblServiceName.Visible = true;
-                layout.lblQty.Visible = true;
-                layout.lblPrice.Visible = true;
-                layout.lblTotalAmount.Visible = true;
+                    // Create a new AppointmentInvoiceLayout instance
+                    AppointmentInvoiceLayout layout = new AppointmentInvoiceLayout();
 
-                // Add the layout to the ServiceFlowLayout
-                ServiceFlowLayout.Controls.Add(layout);
+                    // Set label values
+                    layout.lblServiceName.Text = serviceName;
+                    layout.lblQty.Text = quantity.ToString();
+                    layout.lblPrice.Text = "₱" + price.ToString("N2"); // Format as currency
+                    layout.lblTotalAmount.Text = "₱" + totalAmount.ToString("N2"); // Format as currency
+
+                    // Ensure the labels are visible
+                    layout.lblServiceName.Visible = true;
+                    layout.lblQty.Visible = true;
+                    layout.lblPrice.Visible = true;
+                    layout.lblTotalAmount.Visible = true;
+
+                    // Add the layout control to the ServiceFlowLayout
+                    ServiceFlowLayout.Controls.Add(layout);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading appointment services: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
     }
 }

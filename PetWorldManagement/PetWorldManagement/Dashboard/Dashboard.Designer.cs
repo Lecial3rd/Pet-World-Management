@@ -34,6 +34,7 @@
             this.flowlayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.panel18 = new System.Windows.Forms.Panel();
             this.dashboard_btn = new System.Windows.Forms.Button();
+            this.btn_Staff = new System.Windows.Forms.Button();
             this.appointmentList_btn = new System.Windows.Forms.Button();
             this.productList_btn = new System.Windows.Forms.Button();
             this.supplierList_btn = new System.Windows.Forms.Button();
@@ -45,8 +46,14 @@
             this.panel14 = new System.Windows.Forms.Panel();
             this.menuTransition_timer = new System.Windows.Forms.Timer(this.components);
             this.base_panel = new System.Windows.Forms.Panel();
-            this.btn_Staff = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.flowlayoutPanel.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // logoTitle_txt
@@ -61,7 +68,7 @@
             this.logoTitle_txt.Margin = new System.Windows.Forms.Padding(0);
             this.logoTitle_txt.Name = "logoTitle_txt";
             this.logoTitle_txt.Padding = new System.Windows.Forms.Padding(20);
-            this.logoTitle_txt.Size = new System.Drawing.Size(213, 139);
+            this.logoTitle_txt.Size = new System.Drawing.Size(213, 135);
             this.logoTitle_txt.TabIndex = 4;
             this.logoTitle_txt.Text = "Pet World";
             this.logoTitle_txt.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -71,6 +78,7 @@
             this.flowlayoutPanel.BackColor = System.Drawing.Color.SlateBlue;
             this.flowlayoutPanel.Controls.Add(this.logoTitle_txt);
             this.flowlayoutPanel.Controls.Add(this.panel18);
+            this.flowlayoutPanel.Controls.Add(this.panel1);
             this.flowlayoutPanel.Controls.Add(this.dashboard_btn);
             this.flowlayoutPanel.Controls.Add(this.btn_Staff);
             this.flowlayoutPanel.Controls.Add(this.appointmentList_btn);
@@ -82,6 +90,8 @@
             this.flowlayoutPanel.Controls.Add(this.Sales_btn);
             this.flowlayoutPanel.Controls.Add(this.Invoice_btn);
             this.flowlayoutPanel.Controls.Add(this.panel14);
+            this.flowlayoutPanel.Controls.Add(this.panel2);
+            this.flowlayoutPanel.Controls.Add(this.button1);
             this.flowlayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowlayoutPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowlayoutPanel.Location = new System.Drawing.Point(0, 0);
@@ -93,7 +103,7 @@
             // panel18
             // 
             this.panel18.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel18.Location = new System.Drawing.Point(0, 139);
+            this.panel18.Location = new System.Drawing.Point(0, 135);
             this.panel18.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
             this.panel18.Name = "panel18";
             this.panel18.Size = new System.Drawing.Size(213, 3);
@@ -105,20 +115,41 @@
             this.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dashboard_btn.FlatAppearance.BorderSize = 0;
             this.dashboard_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dashboard_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashboard_btn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboard_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.dashboard_btn.Image = ((System.Drawing.Image)(resources.GetObject("dashboard_btn.Image")));
             this.dashboard_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.dashboard_btn.Location = new System.Drawing.Point(0, 152);
+            this.dashboard_btn.Location = new System.Drawing.Point(0, 174);
             this.dashboard_btn.Margin = new System.Windows.Forms.Padding(0);
             this.dashboard_btn.Name = "dashboard_btn";
             this.dashboard_btn.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.dashboard_btn.Size = new System.Drawing.Size(207, 40);
+            this.dashboard_btn.Size = new System.Drawing.Size(207, 35);
             this.dashboard_btn.TabIndex = 2;
             this.dashboard_btn.Text = "Dashboard";
             this.dashboard_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashboard_btn.UseVisualStyleBackColor = false;
             this.dashboard_btn.Click += new System.EventHandler(this.dashboard_btn_Click);
+            // 
+            // btn_Staff
+            // 
+            this.btn_Staff.BackColor = System.Drawing.Color.SlateBlue;
+            this.btn_Staff.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Staff.FlatAppearance.BorderSize = 0;
+            this.btn_Staff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Staff.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Staff.ForeColor = System.Drawing.SystemColors.Control;
+            this.btn_Staff.Image = ((System.Drawing.Image)(resources.GetObject("btn_Staff.Image")));
+            this.btn_Staff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btn_Staff.Location = new System.Drawing.Point(0, 209);
+            this.btn_Staff.Margin = new System.Windows.Forms.Padding(0);
+            this.btn_Staff.Name = "btn_Staff";
+            this.btn_Staff.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.btn_Staff.Size = new System.Drawing.Size(207, 35);
+            this.btn_Staff.TabIndex = 5;
+            this.btn_Staff.Text = "Staff";
+            this.btn_Staff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_Staff.UseVisualStyleBackColor = false;
+            this.btn_Staff.Click += new System.EventHandler(this.btn_Staff_Click);
             // 
             // appointmentList_btn
             // 
@@ -126,15 +157,15 @@
             this.appointmentList_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.appointmentList_btn.FlatAppearance.BorderSize = 0;
             this.appointmentList_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.appointmentList_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.appointmentList_btn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.appointmentList_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.appointmentList_btn.Image = ((System.Drawing.Image)(resources.GetObject("appointmentList_btn.Image")));
             this.appointmentList_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.appointmentList_btn.Location = new System.Drawing.Point(0, 232);
+            this.appointmentList_btn.Location = new System.Drawing.Point(0, 244);
             this.appointmentList_btn.Margin = new System.Windows.Forms.Padding(0);
             this.appointmentList_btn.Name = "appointmentList_btn";
             this.appointmentList_btn.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.appointmentList_btn.Size = new System.Drawing.Size(207, 40);
+            this.appointmentList_btn.Size = new System.Drawing.Size(207, 35);
             this.appointmentList_btn.TabIndex = 0;
             this.appointmentList_btn.Text = "Appointment";
             this.appointmentList_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -147,15 +178,15 @@
             this.productList_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.productList_btn.FlatAppearance.BorderSize = 0;
             this.productList_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productList_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productList_btn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.productList_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.productList_btn.Image = ((System.Drawing.Image)(resources.GetObject("productList_btn.Image")));
             this.productList_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.productList_btn.Location = new System.Drawing.Point(0, 272);
+            this.productList_btn.Location = new System.Drawing.Point(0, 279);
             this.productList_btn.Margin = new System.Windows.Forms.Padding(0);
             this.productList_btn.Name = "productList_btn";
             this.productList_btn.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.productList_btn.Size = new System.Drawing.Size(207, 40);
+            this.productList_btn.Size = new System.Drawing.Size(207, 35);
             this.productList_btn.TabIndex = 0;
             this.productList_btn.Text = "Product";
             this.productList_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,15 +199,15 @@
             this.supplierList_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.supplierList_btn.FlatAppearance.BorderSize = 0;
             this.supplierList_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.supplierList_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.supplierList_btn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.supplierList_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.supplierList_btn.Image = ((System.Drawing.Image)(resources.GetObject("supplierList_btn.Image")));
             this.supplierList_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.supplierList_btn.Location = new System.Drawing.Point(0, 312);
+            this.supplierList_btn.Location = new System.Drawing.Point(0, 314);
             this.supplierList_btn.Margin = new System.Windows.Forms.Padding(0);
             this.supplierList_btn.Name = "supplierList_btn";
             this.supplierList_btn.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.supplierList_btn.Size = new System.Drawing.Size(207, 40);
+            this.supplierList_btn.Size = new System.Drawing.Size(207, 35);
             this.supplierList_btn.TabIndex = 0;
             this.supplierList_btn.Text = "Supplier";
             this.supplierList_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,15 +220,15 @@
             this.purchaseOrder_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.purchaseOrder_btn.FlatAppearance.BorderSize = 0;
             this.purchaseOrder_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.purchaseOrder_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchaseOrder_btn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.purchaseOrder_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.purchaseOrder_btn.Image = ((System.Drawing.Image)(resources.GetObject("purchaseOrder_btn.Image")));
             this.purchaseOrder_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.purchaseOrder_btn.Location = new System.Drawing.Point(0, 352);
+            this.purchaseOrder_btn.Location = new System.Drawing.Point(0, 349);
             this.purchaseOrder_btn.Margin = new System.Windows.Forms.Padding(0);
             this.purchaseOrder_btn.Name = "purchaseOrder_btn";
             this.purchaseOrder_btn.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.purchaseOrder_btn.Size = new System.Drawing.Size(207, 40);
+            this.purchaseOrder_btn.Size = new System.Drawing.Size(207, 35);
             this.purchaseOrder_btn.TabIndex = 0;
             this.purchaseOrder_btn.Text = "Purchase Order";
             this.purchaseOrder_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,15 +241,15 @@
             this.orderList_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.orderList_btn.FlatAppearance.BorderSize = 0;
             this.orderList_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.orderList_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderList_btn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderList_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.orderList_btn.Image = ((System.Drawing.Image)(resources.GetObject("orderList_btn.Image")));
             this.orderList_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.orderList_btn.Location = new System.Drawing.Point(0, 392);
+            this.orderList_btn.Location = new System.Drawing.Point(0, 384);
             this.orderList_btn.Margin = new System.Windows.Forms.Padding(0);
             this.orderList_btn.Name = "orderList_btn";
             this.orderList_btn.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.orderList_btn.Size = new System.Drawing.Size(207, 40);
+            this.orderList_btn.Size = new System.Drawing.Size(207, 35);
             this.orderList_btn.TabIndex = 0;
             this.orderList_btn.Text = "Order List";
             this.orderList_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,15 +262,15 @@
             this.Inventory_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Inventory_btn.FlatAppearance.BorderSize = 0;
             this.Inventory_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Inventory_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inventory_btn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Inventory_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.Inventory_btn.Image = ((System.Drawing.Image)(resources.GetObject("Inventory_btn.Image")));
             this.Inventory_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Inventory_btn.Location = new System.Drawing.Point(0, 432);
+            this.Inventory_btn.Location = new System.Drawing.Point(0, 419);
             this.Inventory_btn.Margin = new System.Windows.Forms.Padding(0);
             this.Inventory_btn.Name = "Inventory_btn";
             this.Inventory_btn.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.Inventory_btn.Size = new System.Drawing.Size(207, 40);
+            this.Inventory_btn.Size = new System.Drawing.Size(207, 35);
             this.Inventory_btn.TabIndex = 0;
             this.Inventory_btn.Text = "Inventory";
             this.Inventory_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -252,15 +283,15 @@
             this.Sales_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sales_btn.FlatAppearance.BorderSize = 0;
             this.Sales_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Sales_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sales_btn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Sales_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.Sales_btn.Image = ((System.Drawing.Image)(resources.GetObject("Sales_btn.Image")));
             this.Sales_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Sales_btn.Location = new System.Drawing.Point(0, 472);
+            this.Sales_btn.Location = new System.Drawing.Point(0, 454);
             this.Sales_btn.Margin = new System.Windows.Forms.Padding(0);
             this.Sales_btn.Name = "Sales_btn";
             this.Sales_btn.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.Sales_btn.Size = new System.Drawing.Size(207, 40);
+            this.Sales_btn.Size = new System.Drawing.Size(207, 35);
             this.Sales_btn.TabIndex = 0;
             this.Sales_btn.Text = "Sales";
             this.Sales_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -273,15 +304,15 @@
             this.Invoice_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Invoice_btn.FlatAppearance.BorderSize = 0;
             this.Invoice_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Invoice_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Invoice_btn.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Invoice_btn.ForeColor = System.Drawing.SystemColors.Control;
             this.Invoice_btn.Image = ((System.Drawing.Image)(resources.GetObject("Invoice_btn.Image")));
             this.Invoice_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.Invoice_btn.Location = new System.Drawing.Point(0, 512);
+            this.Invoice_btn.Location = new System.Drawing.Point(0, 489);
             this.Invoice_btn.Margin = new System.Windows.Forms.Padding(0);
             this.Invoice_btn.Name = "Invoice_btn";
             this.Invoice_btn.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.Invoice_btn.Size = new System.Drawing.Size(207, 40);
+            this.Invoice_btn.Size = new System.Drawing.Size(207, 35);
             this.Invoice_btn.TabIndex = 0;
             this.Invoice_btn.Text = "Invoice";
             this.Invoice_btn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,7 +322,7 @@
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel14.Location = new System.Drawing.Point(0, 562);
+            this.panel14.Location = new System.Drawing.Point(0, 534);
             this.panel14.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(213, 3);
@@ -307,26 +338,66 @@
             this.base_panel.Size = new System.Drawing.Size(875, 628);
             this.base_panel.TabIndex = 2;
             // 
-            // btn_Staff
+            // panel1
             // 
-            this.btn_Staff.BackColor = System.Drawing.Color.SlateBlue;
-            this.btn_Staff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Staff.FlatAppearance.BorderSize = 0;
-            this.btn_Staff.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Staff.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Staff.ForeColor = System.Drawing.SystemColors.Control;
-            this.btn_Staff.Image = ((System.Drawing.Image)(resources.GetObject("btn_Staff.Image")));
-            this.btn_Staff.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_Staff.Location = new System.Drawing.Point(0, 192);
-            this.btn_Staff.Margin = new System.Windows.Forms.Padding(0);
-            this.btn_Staff.Name = "btn_Staff";
-            this.btn_Staff.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
-            this.btn_Staff.Size = new System.Drawing.Size(207, 40);
-            this.btn_Staff.TabIndex = 5;
-            this.btn_Staff.Text = "Staff";
-            this.btn_Staff.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Staff.UseVisualStyleBackColor = false;
-            this.btn_Staff.Click += new System.EventHandler(this.btn_Staff_Click);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 148);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(209, 26);
+            this.panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(5, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Menu";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Location = new System.Drawing.Point(0, 547);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(209, 26);
+            this.panel2.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(5, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(31, 15);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Exit";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SlateBlue;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Control;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.Location = new System.Drawing.Point(0, 573);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.button1.Size = new System.Drawing.Size(209, 35);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Logout";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Dashboard
             // 
@@ -341,6 +412,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.flowlayoutPanel.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -362,5 +437,10 @@
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Button btn_Staff;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
     }
 }

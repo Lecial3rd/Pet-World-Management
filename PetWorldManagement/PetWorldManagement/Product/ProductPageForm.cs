@@ -38,7 +38,7 @@ namespace PetWorldManagement
         {
             dataGridViewProducts.DataSource = products;
 
-            if (dataGridViewProducts.Columns["Update Action"] == null && dataGridViewProducts.Columns["Delete Action"] == null)
+            if (dataGridViewProducts.Columns["Update"] == null && dataGridViewProducts.Columns["Delete"] == null)
             {
                 AddActionButtonsToGrid(); // Add Update and Delete buttons only once
             }
@@ -58,7 +58,7 @@ namespace PetWorldManagement
         {
             DataGridViewButtonColumn updateButton = new DataGridViewButtonColumn
             {
-                Name = "Update Action",
+                Name = "Update",
                 Text = "UPDATE",
                 UseColumnTextForButtonValue = true
             };
@@ -67,7 +67,7 @@ namespace PetWorldManagement
 
             DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn
             {
-                Name = "Delete Action",
+                Name = "Delete",
                 Text = "DELETE",
                 UseColumnTextForButtonValue = true
             };
@@ -82,32 +82,6 @@ namespace PetWorldManagement
             LoadProducts(); // Refresh product list after adding
         }
 
-        private void dataGridViewProducts_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = dataGridViewProducts.Rows[e.RowIndex];
-                int productId = Convert.ToInt32(row.Cells["ProductID"].Value);
-
-                if (e.ColumnIndex == dataGridViewProducts.Columns["Update Action"].Index)
-                {
-                    // Open form in update mode
-                    AddProductForm updateForm = new AddProductForm(factory);
-                    updateForm.SetProductData(row);
-                    updateForm.ShowDialog();
-                    LoadProducts(); // Refresh grid after update
-                }
-                else if (e.ColumnIndex == dataGridViewProducts.Columns["Delete Action"].Index)
-                {
-                    var confirmResult = MessageBox.Show("Are you sure to delete this product?", "Confirm Delete", MessageBoxButtons.YesNo);
-                    if (confirmResult == DialogResult.Yes)
-                    {
-                        productFacade.Delete(productId);
-                        LoadProducts();
-                    }
-                }
-            }
-        }
 
         private void productCategory_btn_Click(object sender, EventArgs e)
         {
@@ -119,6 +93,33 @@ namespace PetWorldManagement
             string keyword = txtSearch.Text;
             DataTable filteredProducts = productFacade.Search(keyword);
             DisplayProducts(filteredProducts);
+        }
+
+        private void dataGridViewProducts_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewProducts.Rows[e.RowIndex];
+                int productId = Convert.ToInt32(row.Cells["ProductID"].Value);
+
+                if (e.ColumnIndex == dataGridViewProducts.Columns["Update"].Index)
+                {
+                    // Open form in update mode
+                    AddProductForm updateForm = new AddProductForm(factory);
+                    updateForm.SetProductData(row);
+                    updateForm.ShowDialog();
+                    LoadProducts(); // Refresh grid after update
+                }
+                else if (e.ColumnIndex == dataGridViewProducts.Columns["Delete"].Index)
+                {
+                    var confirmResult = MessageBox.Show("Are you sure to delete this product?", "Confirm Delete", MessageBoxButtons.YesNo);
+                    if (confirmResult == DialogResult.Yes)
+                    {
+                        productFacade.Delete(productId);
+                        LoadProducts();
+                    }
+                }
+            }
         }
     }
 }

@@ -39,23 +39,23 @@
             // lblNotAvailable
             // 
             lblNotAvailable.AutoSize = true;
-            lblNotAvailable.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            lblNotAvailable.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             lblNotAvailable.ForeColor = System.Drawing.Color.IndianRed;
             lblNotAvailable.Location = new System.Drawing.Point(24, 70);
             lblNotAvailable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             lblNotAvailable.Name = "lblNotAvailable";
-            lblNotAvailable.Size = new System.Drawing.Size(107, 19);
+            lblNotAvailable.Size = new System.Drawing.Size(104, 18);
             lblNotAvailable.TabIndex = 19;
             lblNotAvailable.Text = "Not Available";
             lblNotAvailable.Visible = false;
-            // 
+            //
             // Price
             // 
-            this.Price.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Price.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Price.ForeColor = System.Drawing.Color.SlateBlue;
-            this.Price.Location = new System.Drawing.Point(0, 196);
+            this.Price.Location = new System.Drawing.Point(0, 183);
             this.Price.Name = "Price";
-            this.Price.Size = new System.Drawing.Size(142, 20);
+            this.Price.Size = new System.Drawing.Size(142, 39);
             this.Price.TabIndex = 18;
             this.Price.Text = "P 159.00";
             this.Price.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,7 +66,7 @@
             this.btnAddtoCart.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnAddtoCart.FlatAppearance.BorderSize = 0;
             this.btnAddtoCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddtoCart.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddtoCart.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddtoCart.ForeColor = System.Drawing.SystemColors.Control;
             this.btnAddtoCart.Location = new System.Drawing.Point(0, 222);
             this.btnAddtoCart.Margin = new System.Windows.Forms.Padding(0);
@@ -78,11 +78,11 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(3, 147);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 39);
+            this.label1.Size = new System.Drawing.Size(139, 36);
             this.label1.TabIndex = 16;
             this.label1.Text = "Doggo ropey slippery toy";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -115,11 +115,10 @@
         }
 
         #endregion
-
-        public static System.Windows.Forms.Label lblNotAvailable;
         private System.Windows.Forms.Label Price;
         public System.Windows.Forms.Button btnAddtoCart;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public static System.Windows.Forms.Label lblNotAvailable;
     }
 }

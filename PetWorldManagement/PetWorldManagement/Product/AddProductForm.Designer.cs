@@ -97,7 +97,7 @@ namespace PetWorldManagement
             this.btnSelectImage.BackColor = System.Drawing.Color.SlateBlue;
             this.btnSelectImage.FlatAppearance.BorderSize = 0;
             this.btnSelectImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSelectImage.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSelectImage.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSelectImage.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSelectImage.Location = new System.Drawing.Point(409, 245);
             this.btnSelectImage.Name = "btnSelectImage";
@@ -112,7 +112,7 @@ namespace PetWorldManagement
             this.btnSubmit.BackColor = System.Drawing.Color.SlateBlue;
             this.btnSubmit.FlatAppearance.BorderSize = 0;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.Control;
             this.btnSubmit.Location = new System.Drawing.Point(158, 245);
             this.btnSubmit.Name = "btnSubmit";
@@ -124,50 +124,50 @@ namespace PetWorldManagement
             // 
             // lblProductName
             // 
-            this.lblProductName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblProductName.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblProductName.Location = new System.Drawing.Point(38, 73);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(120, 23);
             this.lblProductName.TabIndex = 2;
-            this.lblProductName.Text = "Product Name:";
+            this.lblProductName.Text = "Product Name";
             // 
             // lblDescription
             // 
-            this.lblDescription.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDescription.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblDescription.Location = new System.Drawing.Point(38, 113);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(120, 23);
             this.lblDescription.TabIndex = 4;
-            this.lblDescription.Text = "Description:";
+            this.lblDescription.Text = "Description";
             // 
             // lblPrice
             // 
-            this.lblPrice.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPrice.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblPrice.Location = new System.Drawing.Point(38, 156);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(120, 23);
             this.lblPrice.TabIndex = 6;
-            this.lblPrice.Text = "Price:";
+            this.lblPrice.Text = "Price";
             // 
             // lblCategory
             // 
-            this.lblCategory.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblCategory.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblCategory.Location = new System.Drawing.Point(38, 196);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.Size = new System.Drawing.Size(120, 23);
             this.lblCategory.TabIndex = 8;
-            this.lblCategory.Text = "Category:";
+            this.lblCategory.Text = "Category";
             // 
             // lblImage
             // 
-            this.lblImage.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblImage.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImage.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblImage.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.lblImage.Location = new System.Drawing.Point(405, 70);
+            this.lblImage.Location = new System.Drawing.Point(406, 71);
             this.lblImage.Name = "lblImage";
             this.lblImage.Size = new System.Drawing.Size(204, 23);
             this.lblImage.TabIndex = 10;

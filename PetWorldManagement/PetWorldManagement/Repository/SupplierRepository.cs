@@ -23,7 +23,7 @@ namespace PetWorldManagement
         public DataTable GetAll()
         {
             DataTable dt = new DataTable();
-            string query = "SELECT SupplierID, SupplierName, Address, ContactPerson, ContactEmail, ContactPhone FROM Suppliers";
+            string query = "SELECT SupplierID, SupplierName as Name, Address, ContactPerson as 'Contact Person', ContactEmail as Email, ContactPhone as 'Phone No.' FROM Suppliers";
             SqlDataAdapter da = new SqlDataAdapter(query, connection);
             da.Fill(dt);
             return dt;
@@ -71,21 +71,30 @@ namespace PetWorldManagement
 
         public void Delete(int supplierID)
         {
-            string query = "DELETE FROM Suppliers WHERE SupplierID = @SupplierID";
-            using (SqlCommand cmd = new SqlCommand(query, connection))
+            string query1 = $"DELETE FROM SupplierProduct WHERE SupplierID = {supplierID}";
+            string query2 = $"DELETE FROM Suppliers WHERE SupplierID = {supplierID}";
+
+            using (SqlCommand cmd = new SqlCommand(query1, connection))
             {
-                cmd.Parameters.AddWithValue("@SupplierID", supplierID);
+                connection.Open();
+                cmd.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            using (SqlCommand cmd = new SqlCommand(query2, connection))
+            {
                 connection.Open();
                 cmd.ExecuteNonQuery();
                 connection.Close();
             }
         }
 
+
         public DataTable Search(string keyword)
         {
             DataTable dt = new DataTable();
             string query = @"
-                            SELECT SupplierID, SupplierName, Address, ContactPerson, ContactEmail, ContactPhone 
+                            SELECT SupplierID, SupplierName as Name, Address, ContactPerson as 'Contact Person', ContactEmail as Email, ContactPhone as 'Phone No.' 
                             FROM Suppliers 
                             WHERE SupplierName LIKE @Keyword OR CAST(SupplierID AS NVARCHAR) LIKE @Keyword";
 

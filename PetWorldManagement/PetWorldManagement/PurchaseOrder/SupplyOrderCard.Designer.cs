@@ -37,7 +37,7 @@
             // 
             // label_supplierName
             // 
-            this.label_supplierName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_supplierName.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_supplierName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label_supplierName.Location = new System.Drawing.Point(18, 6);
             this.label_supplierName.Name = "label_supplierName";
@@ -50,7 +50,7 @@
             this.purchase_btn.BackColor = System.Drawing.Color.SlateBlue;
             this.purchase_btn.FlatAppearance.BorderSize = 0;
             this.purchase_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.purchase_btn.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.purchase_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.purchase_btn.Image = ((System.Drawing.Image)(resources.GetObject("purchase_btn.Image")));
             this.purchase_btn.Location = new System.Drawing.Point(785, 3);
             this.purchase_btn.Name = "purchase_btn";
@@ -61,7 +61,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panel1.Location = new System.Drawing.Point(765, 0);
+            this.panel1.Location = new System.Drawing.Point(766, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(2, 36);
             this.panel1.TabIndex = 5;

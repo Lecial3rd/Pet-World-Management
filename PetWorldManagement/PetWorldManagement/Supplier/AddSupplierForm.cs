@@ -74,7 +74,7 @@ namespace PetWorldManagement
             RepositoryFacade<ProductObject> productFacade = new RepositoryFacade<ProductObject>(factory);
             DataTable dt = productFacade.GetAll();
             Product_comboBox.DataSource = dt;
-            Product_comboBox.DisplayMember = "ProductName";
+            Product_comboBox.DisplayMember = "Product Name";
             Product_comboBox.ValueMember = "ProductID";
         }
 

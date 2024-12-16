@@ -147,6 +147,7 @@ namespace PetWorldManagement.Appointments
                         string serviceName = appointmentControl.lblSName.Text;
                         int quantity = int.Parse(appointmentControl.txtQuantity.Text);
                         decimal totalAmount = decimal.Parse(appointmentControl.lblamount.Text);
+                        decimal price = Convert.ToDecimal(appointmentControl.lblPrice.Text);
 
                         // Get the service ID based on the service name
                         int serviceId = GetServiceIdByName(serviceName);
@@ -159,13 +160,13 @@ namespace PetWorldManagement.Appointments
                         // Check if the service already exists in the AppointmentService table
                         if (ServiceExistsInAppointment(appointmentId, serviceId))
                         {
-                            // Update the quantity if the service already exists
+                            // Update the quantity and total amount if the service already exists
                             UpdateServiceQuantity(appointmentId, serviceId, quantity, totalAmount);
                         }
                         else
                         {
-                            // Add the service to the AppointmentService table
-                            _appointmentRepository.AddAppointmentService(appointmentId, serviceId, quantity, totalAmount);
+                            // Add the service to the AppointmentService table with ServiceName and Price
+                            _appointmentRepository.AddAppointmentService(appointmentId, serviceId, serviceName, price, quantity, totalAmount);
                         }
                     }
                 }
@@ -178,6 +179,7 @@ namespace PetWorldManagement.Appointments
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private bool ServiceExistsInAppointment(int appointmentId, int serviceId)
         {
@@ -239,6 +241,7 @@ namespace PetWorldManagement.Appointments
                 newControl.SetServiceName(serviceName);
                 newControl.SetQuantity(quantity);
                 newControl.SetAmount(GetServicePrice(serviceId) * quantity); // Assuming you have a method to get the price
+                newControl.SetPrice(GetServicePrice(serviceId));
 
                 // Add event handlers for the buttons in the AppointmentControl
                 newControl.btnAddQuantity.Click += (s, args) => newControl.UpdateQuantity(1); // Increment by 1
@@ -278,5 +281,6 @@ namespace PetWorldManagement.Appointments
             if (string.IsNullOrWhiteSpace(petName))
                 throw new ArgumentException("Pet name cannot be empty.", nameof(petName));
         }
+
     }
 }

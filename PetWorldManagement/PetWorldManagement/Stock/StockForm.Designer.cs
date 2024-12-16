@@ -43,13 +43,13 @@
             // 
             // lblProductName
             // 
-            this.lblProductName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblProductName.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblProductName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblProductName.Location = new System.Drawing.Point(41, 36);
             this.lblProductName.Name = "lblProductName";
             this.lblProductName.Size = new System.Drawing.Size(120, 23);
             this.lblProductName.TabIndex = 8;
-            this.lblProductName.Text = "Product Name:";
+            this.lblProductName.Text = "Product Name";
             // 
             // txtProductName
             // 
@@ -63,13 +63,13 @@
             // 
             // lblDescription
             // 
-            this.lblDescription.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblDescription.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblDescription.Location = new System.Drawing.Point(41, 76);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(120, 23);
             this.lblDescription.TabIndex = 10;
-            this.lblDescription.Text = "Quantity:";
+            this.lblDescription.Text = "Quantity";
             // 
             // txtQty
             // 
@@ -83,13 +83,13 @@
             // 
             // lblPrice
             // 
-            this.lblPrice.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblPrice.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblPrice.Location = new System.Drawing.Point(41, 119);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(120, 23);
             this.lblPrice.TabIndex = 12;
-            this.lblPrice.Text = "Available:";
+            this.lblPrice.Text = "Available";
             // 
             // txtAvailable
             // 
@@ -103,13 +103,13 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(41, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 23);
             this.label1.TabIndex = 14;
-            this.label1.Text = "Damage:";
+            this.label1.Text = "Damage";
             // 
             // txtDamage
             // 
@@ -126,7 +126,7 @@
             this.btnUpdateStock.BackColor = System.Drawing.Color.SlateBlue;
             this.btnUpdateStock.FlatAppearance.BorderSize = 0;
             this.btnUpdateStock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdateStock.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateStock.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateStock.ForeColor = System.Drawing.SystemColors.Control;
             this.btnUpdateStock.Location = new System.Drawing.Point(161, 247);
             this.btnUpdateStock.Name = "btnUpdateStock";
@@ -138,13 +138,13 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label2.Location = new System.Drawing.Point(41, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(120, 23);
             this.label2.TabIndex = 17;
-            this.label2.Text = "New Damage:";
+            this.label2.Text = "New Damage";
             // 
             // txtNewDamage
             // 

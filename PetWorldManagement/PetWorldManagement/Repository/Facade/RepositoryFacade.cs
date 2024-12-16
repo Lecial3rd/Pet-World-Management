@@ -1,4 +1,5 @@
-﻿using PetWorldManagement.Repository.Facade;
+﻿using PetWorldManagement.Facade;
+using PetWorldManagement.Repository.Facade;
 using PetWorldManagement.Supplier;
 using PetWorldManagement.Supplier.PurchaseOrder;
 using System.Collections.Generic;
@@ -11,12 +12,14 @@ namespace PetWorldManagement
         private readonly IRepository<T> repository;
         private readonly OrderRepositoryFacade orderFacade;
         private readonly SupplierProductFacade supplierProductFacade;
+        private readonly InvoiceAppointmentFacade invoiceFacade;
 
         public RepositoryFacade(IRepositoryFactory factory)
         {
             repository = factory.CreateRepository<T>();
             orderFacade = new OrderRepositoryFacade();
             supplierProductFacade = new SupplierProductFacade();
+            invoiceFacade = new InvoiceAppointmentFacade();
         }
 
         public DataTable GetAll()
@@ -43,7 +46,6 @@ namespace PetWorldManagement
         {
             repository.Delete(id);
         }
-
 
         // Specialized methods for OrderFacade
         public List<ProductItem> GetSupplierProducts(int supplierID)
@@ -76,12 +78,32 @@ namespace PetWorldManagement
             return orderFacade.GetInventoryProduct();
         }
 
-
-        //Specialized Method for supplierProductFacade
+        // Specialized Method for supplierProductFacade
         public void insertProductSuppliers(List<SupplierProductObject> supplierProducts)
         {
             supplierProductFacade.insertProductSuppliers(supplierProducts);
         }
+
+        // Specialized Methods for InvoiceAppointmentFacade
+        public DataTable GetAllInvoices()
+        {
+            return invoiceFacade.GetAllInvoices();
+        }
+
+        public DataTable ViewSpecificAppointmentInvoice(int invoiceID)
+        {
+            return invoiceFacade.ViewSpecificAppointmentInvoice(invoiceID);
+        }
+
+        public DataTable ViewSpecificSalesInvoice(int invoiceID)
+        {
+            return invoiceFacade.ViewSpecificSalesInvoice(invoiceID);
+        }
+
+
+        public DataTable SearchInvoice(string invoiceKeyword)
+        {
+            return invoiceFacade.SearchInvoice(invoiceKeyword);
+        }
     }
 }
-

@@ -58,12 +58,6 @@
     <Compile Include="Appointments\AppointmentControl.Designer.cs">
       <DependentUpon>AppointmentControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Appointments\AppointmentInvoice.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Appointments\AppointmentInvoice.Designer.cs">
-      <DependentUpon>AppointmentInvoice.cs</DependentUpon>
-    </Compile>
     <Compile Include="Appointments\AppointmentInvoiceLayout.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,17 +108,35 @@
     <Compile Include="Inventory\InventoryUserControl.Designer.cs">
       <DependentUpon>InventoryUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="POS\InvoiceForm.cs">
+    <Compile Include="Invoice\Invoice.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="POS\InvoiceForm.Designer.cs">
+    <Compile Include="Invoice\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice\InvoiceAppointmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\InvoiceAppointmentForm.Designer.cs">
+      <DependentUpon>InvoiceAppointmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice\InvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\InvoiceForm.Designer.cs">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="POS\InvoiceLayout.cs">
+    <Compile Include="Invoice\InvoiceLayout.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="POS\InvoiceLayout.Designer.cs">
+    <Compile Include="Invoice\InvoiceLayout.Designer.cs">
       <DependentUpon>InvoiceLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Overview\OverviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Overview\OverviewForm.Designer.cs">
+      <DependentUpon>OverviewForm.cs</DependentUpon>
     </Compile>
     <Compile Include="POS\POSForm.cs">
       <SubType>Form</SubType>
@@ -151,13 +163,38 @@
       <DependentUpon>AddProductForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Repository\AppointmentRepository.cs" />
+    <Compile Include="Repository\Facade\InvoiceFacade.cs" />
     <Compile Include="Repository\Facade\OrderRepositoryFacade.cs" />
     <Compile Include="Repository\Facade\RepositoryFacade.cs" />
     <Compile Include="Repository\Facade\SupplierProductFacade.cs" />
     <Compile Include="Repository\InventoryRepository.cs" />
     <Compile Include="Repository\OrderFormRepository.cs" />
+    <Compile Include="Repository\OverviewFormRepository.cs" />
     <Compile Include="Repository\ProductSupplierRepository.cs" />
+    <Compile Include="Repository\InvoiceRepository.cs" />
+    <Compile Include="Repository\ServiceRepository.cs" />
+    <Compile Include="Repository\StaffRepository.cs" />
     <Compile Include="Repository\StockRepository.cs" />
+    <Compile Include="Sales\SalesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales\SalesForm.Designer.cs">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service\ServiceForm.Designer.cs">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service\ServiceObject.cs" />
+    <Compile Include="Staff\StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staff\StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staff\StaffObject.cs" />
     <Compile Include="StartUp\StartUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -253,11 +290,11 @@
     <EmbeddedResource Include="Appointments\AppointmentControl.resx">
       <DependentUpon>AppointmentControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Appointments\AppointmentInvoice.resx">
-      <DependentUpon>AppointmentInvoice.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Appointments\AppointmentInvoiceLayout.resx">
       <DependentUpon>AppointmentInvoiceLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointments\AppointmentPageForm.resx">
+      <DependentUpon>AppointmentPageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Appointments\ViewAppointment.resx">
       <DependentUpon>ViewAppointment.cs</DependentUpon>
@@ -277,11 +314,20 @@
     <EmbeddedResource Include="Inventory\InventoryUserControl.resx">
       <DependentUpon>InventoryUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="POS\InvoiceForm.resx">
+    <EmbeddedResource Include="Invoice\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice\InvoiceAppointmentForm.resx">
+      <DependentUpon>InvoiceAppointmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice\InvoiceForm.resx">
       <DependentUpon>InvoiceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="POS\InvoiceLayout.resx">
+    <EmbeddedResource Include="Invoice\InvoiceLayout.resx">
       <DependentUpon>InvoiceLayout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Overview\OverviewForm.resx">
+      <DependentUpon>OverviewForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="POS\POSForm.resx">
       <DependentUpon>POSForm.cs</DependentUpon>
@@ -325,6 +371,15 @@
     <EmbeddedResource Include="PurchaseOrder\PurchaseOrderForm.resx">
       <DependentUpon>PurchaseOrderForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Sales\SalesForm.resx">
+      <DependentUpon>SalesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service\ServiceForm.resx">
+      <DependentUpon>ServiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staff\StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StartUp\StartUp.resx">
       <DependentUpon>StartUp.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,8 +408,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Staff\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

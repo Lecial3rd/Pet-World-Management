@@ -82,23 +82,25 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(684, 5);
+            this.label1.Location = new System.Drawing.Point(666, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 23);
+            this.label1.Size = new System.Drawing.Size(85, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Quantity";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelCategoryName
             // 
-            this.labelCategoryName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategoryName.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategoryName.ForeColor = System.Drawing.SystemColors.Control;
             this.labelCategoryName.Location = new System.Drawing.Point(268, 5);
             this.labelCategoryName.Name = "labelCategoryName";
             this.labelCategoryName.Size = new System.Drawing.Size(75, 23);
             this.labelCategoryName.TabIndex = 2;
             this.labelCategoryName.Text = "Product";
+            this.labelCategoryName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // inventory_flowLayout
             // 
@@ -107,7 +109,7 @@
             this.inventory_flowLayout.Location = new System.Drawing.Point(12, 198);
             this.inventory_flowLayout.Margin = new System.Windows.Forms.Padding(0);
             this.inventory_flowLayout.Name = "inventory_flowLayout";
-            this.inventory_flowLayout.Size = new System.Drawing.Size(851, 421);
+            this.inventory_flowLayout.Size = new System.Drawing.Size(851, 418);
             this.inventory_flowLayout.TabIndex = 17;
             // 
             // btnViewLog
@@ -116,14 +118,14 @@
             this.btnViewLog.BackColor = System.Drawing.Color.SlateBlue;
             this.btnViewLog.FlatAppearance.BorderSize = 0;
             this.btnViewLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewLog.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.btnViewLog.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewLog.ForeColor = System.Drawing.SystemColors.Control;
             this.btnViewLog.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnViewLog.Location = new System.Drawing.Point(711, 133);
             this.btnViewLog.Name = "btnViewLog";
             this.btnViewLog.Size = new System.Drawing.Size(152, 30);
             this.btnViewLog.TabIndex = 21;
-            this.btnViewLog.Text = "View Log";
+            this.btnViewLog.Text = "Report";
             this.btnViewLog.UseVisualStyleBackColor = false;
             this.btnViewLog.Click += new System.EventHandler(this.btnViewLog_Click);
             // 
@@ -142,11 +144,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.Control;
-            this.label11.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label11.Location = new System.Drawing.Point(12, 24);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 20);
+            this.label11.Size = new System.Drawing.Size(59, 18);
             this.label11.TabIndex = 24;
             this.label11.Text = "Search";
             // 
@@ -155,10 +157,11 @@
             this.txtSearch.BackColor = System.Drawing.SystemColors.Control;
             this.txtSearch.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtSearch.Location = new System.Drawing.Point(70, 19);
+            this.txtSearch.Location = new System.Drawing.Point(84, 19);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(241, 26);
+            this.txtSearch.Size = new System.Drawing.Size(227, 26);
             this.txtSearch.TabIndex = 5;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // InventoryForm
             // 

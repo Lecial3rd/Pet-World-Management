@@ -47,7 +47,7 @@ namespace PetWorldManagement.StartUp
             string username = txtUser.Text;
             string password = txtPass.Text;
 
-            if(validateAdmin(username, password))
+            if(ValidateAdmin(username, password))
             {
                 Dashboard dashboard = new Dashboard();
                 dashboard.ShowDialog();
@@ -59,26 +59,37 @@ namespace PetWorldManagement.StartUp
             }
         }
 
-        private bool validateAdmin(string username, string password)
+        private bool ValidateAdmin(string username, string password)
         {
             try
             {
-                string query = $"SELECT COUNT(*) FROM Admin WHERE Name = '{username}' AND PassWord = '{password}'";
+                // Query to check if the user exists with RoleID = 4 (Admin role)
+                string query = @"SELECT COUNT(*) 
+                         FROM Staff 
+                         WHERE RoleID = 4 AND username = @username AND password = @password";
+
                 using (SqlConnection conn = DatabaseConn.getInstance().GetConnection())
                 {
                     conn.Open();
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
+                        // Use parameterized queries to prevent SQL injection
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+
+                        // Execute the query and check the count
                         int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        return count > 0;
+                        return count > 0; // Return true if an admin user is found
                     }
                 }
             }
             catch (Exception ex)
             {
+                // Log error or handle appropriately (avoid revealing sensitive details in production)
                 MessageBox.Show($"An error occurred while validating: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
+
     }
 }

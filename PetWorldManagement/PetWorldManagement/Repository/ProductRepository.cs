@@ -11,7 +11,7 @@ namespace PetWorldManagement
             DataTable dt = new DataTable();
             using (SqlConnection conn = DatabaseConn.getInstance().GetConnection())
             {
-                string query = "SELECT ProductID, ProductName, CategoryID, Description, Price FROM Products";
+                string query = "SELECT ProductID, ProductName as 'Product Name', CategoryID, Description, Price FROM Products";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 adapter.Fill(dt);
             }
@@ -94,7 +94,7 @@ namespace PetWorldManagement
             using (SqlConnection conn = DatabaseConn.getInstance().GetConnection())
             {
                 string query = @"
-                SELECT ProductID, ProductName, CategoryID, Description, Price 
+                SELECT ProductID, ProductName as 'Product Name', CategoryID, Description, Price 
                 FROM Products 
                 WHERE ProductName LIKE '%' + @Keyword + '%' OR CAST(ProductID AS NVARCHAR) LIKE '%' + @Keyword + '%'";
                 using (SqlCommand cmd = new SqlCommand(query, conn))

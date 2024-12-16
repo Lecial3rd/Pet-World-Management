@@ -105,7 +105,11 @@ namespace PetWorldManagement.Appointments
                     Name = "Status",
                     HeaderText = "Status",
                     DataPropertyName = "StatusID", // Bind to StatusID
-                    DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox
+                    DisplayStyle = DataGridViewComboBoxDisplayStyle.ComboBox,
+                    DefaultCellStyle = new DataGridViewCellStyle
+                    {
+                        ForeColor = SystemColors.ControlDarkDark // Set font color to ControlDarkDark
+                    }
                 };
 
                 // Add options to the ComboBox
@@ -120,34 +124,11 @@ namespace PetWorldManagement.Appointments
                 dataGridViewAppointmentList.Columns.Add(statusColumn);
             }
 
-            // Add the View button column if it doesn't exist
-            if (dataGridViewAppointmentList.Columns["View"] == null)
-            {
-                DataGridViewButtonColumn viewButton = new DataGridViewButtonColumn
-                {
-                    Name = "View",
-                    Text = "VIEW",
-                    UseColumnTextForButtonValue = true
-                };
-                viewButton.DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Regular);
-                dataGridViewAppointmentList.Columns.Add(viewButton);
-            }
-
             // Remove the old StatusID column if it exists
             if (dataGridViewAppointmentList.Columns["StatusID"] != null)
             {
                 dataGridViewAppointmentList.Columns.Remove("StatusID");
             }
-
-            // Add the Delete button column if it doesn't exist
-            if (dataGridViewAppointmentList.Columns["Delete"] == null)
-            {
-                AddDeleteButtonToGrid();
-            }
-
-            // Ensure the Delete button is the last column
-            dataGridViewAppointmentList.Columns["Delete"].DisplayIndex = dataGridViewAppointmentList.Columns.Count - 1;
-
             AutoSizeGridColumns();
         }
 
@@ -158,19 +139,6 @@ namespace PetWorldManagement.Appointments
                 column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             }
         }
-
-        private void AddDeleteButtonToGrid()
-        {
-            DataGridViewButtonColumn deleteButton = new DataGridViewButtonColumn
-            {
-                Name = "Delete",
-                Text = "DELETE",
-                UseColumnTextForButtonValue = true
-            };
-            deleteButton.DefaultCellStyle.Font = new Font("Arial", 10, FontStyle.Regular);
-            dataGridViewAppointmentList.Columns.Add(deleteButton);
-        }
-
         private void dataGridViewAppointmentList_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0) // Ensure the row index is valid
@@ -186,16 +154,7 @@ namespace PetWorldManagement.Appointments
 
                 int appointmentId = Convert.ToInt32(row.Cells["ID"].Value);
 
-                if (e.ColumnIndex == dataGridViewAppointmentList.Columns["Delete"].Index)
-                {
-                    var confirmResult = MessageBox.Show("Are you sure to delete this appointment?", "Confirm Delete", MessageBoxButtons.YesNo);
-                    if (confirmResult == DialogResult.Yes)
-                    {
-                        appointmentRepository.Delete(appointmentId);
-                        LoadAppointments(); // Refresh grid after deletion
-                    }
-                }
-                else if (e.ColumnIndex == dataGridViewAppointmentList.Columns["View"].Index)
+                if (e.ColumnIndex == dataGridViewAppointmentList.Columns["View"].Index)
                 {
                     // Check if the appointmentId is valid before opening the ViewAppointment form
                     if (appointmentId <= 0)
@@ -279,6 +238,11 @@ namespace PetWorldManagement.Appointments
             {
                 dataGridViewAppointmentList.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
+        }
+
+        private void btnAddService_Click(object sender, EventArgs e)
+        {
+            dashboard.LoadForm(new Service.ServiceForm());
         }
     }
 }

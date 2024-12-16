@@ -55,57 +55,57 @@ namespace PetWorldManagement
             // lblSupplierName
             // 
             this.lblSupplierName.AutoSize = true;
-            this.lblSupplierName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSupplierName.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSupplierName.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblSupplierName.Location = new System.Drawing.Point(39, 41);
             this.lblSupplierName.Name = "lblSupplierName";
-            this.lblSupplierName.Size = new System.Drawing.Size(105, 20);
+            this.lblSupplierName.Size = new System.Drawing.Size(113, 18);
             this.lblSupplierName.TabIndex = 0;
-            this.lblSupplierName.Text = "Supplier Name:";
+            this.lblSupplierName.Text = "Supplier Name";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblAddress.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblAddress.Location = new System.Drawing.Point(39, 73);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(64, 20);
+            this.lblAddress.Size = new System.Drawing.Size(67, 18);
             this.lblAddress.TabIndex = 1;
-            this.lblAddress.Text = "Address:";
+            this.lblAddress.Text = "Address";
             // 
             // lblContactPerson
             // 
             this.lblContactPerson.AutoSize = true;
-            this.lblContactPerson.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblContactPerson.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContactPerson.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblContactPerson.Location = new System.Drawing.Point(39, 106);
             this.lblContactPerson.Name = "lblContactPerson";
-            this.lblContactPerson.Size = new System.Drawing.Size(108, 20);
+            this.lblContactPerson.Size = new System.Drawing.Size(120, 18);
             this.lblContactPerson.TabIndex = 2;
-            this.lblContactPerson.Text = "Contact Person:";
+            this.lblContactPerson.Text = "Contact Person";
             // 
             // lblContactEmail
             // 
             this.lblContactEmail.AutoSize = true;
-            this.lblContactEmail.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblContactEmail.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContactEmail.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblContactEmail.Location = new System.Drawing.Point(39, 138);
             this.lblContactEmail.Name = "lblContactEmail";
-            this.lblContactEmail.Size = new System.Drawing.Size(49, 20);
+            this.lblContactEmail.Size = new System.Drawing.Size(47, 18);
             this.lblContactEmail.TabIndex = 3;
-            this.lblContactEmail.Text = "Email:";
+            this.lblContactEmail.Text = "Email";
             // 
             // lblContactPhone
             // 
             this.lblContactPhone.AutoSize = true;
-            this.lblContactPhone.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.lblContactPhone.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblContactPhone.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.lblContactPhone.Location = new System.Drawing.Point(39, 169);
             this.lblContactPhone.Name = "lblContactPhone";
-            this.lblContactPhone.Size = new System.Drawing.Size(53, 20);
+            this.lblContactPhone.Size = new System.Drawing.Size(53, 18);
             this.lblContactPhone.TabIndex = 4;
-            this.lblContactPhone.Text = "Phone:";
+            this.lblContactPhone.Text = "Phone";
             // 
             // txtSupplierName
             // 
@@ -157,7 +157,7 @@ namespace PetWorldManagement
             this.btnInsert.BackColor = System.Drawing.Color.SlateBlue;
             this.btnInsert.FlatAppearance.BorderSize = 0;
             this.btnInsert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInsert.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsert.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsert.ForeColor = System.Drawing.SystemColors.Control;
             this.btnInsert.Location = new System.Drawing.Point(43, 368);
             this.btnInsert.Name = "btnInsert";
@@ -170,13 +170,13 @@ namespace PetWorldManagement
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label1.Location = new System.Drawing.Point(39, 211);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 20);
+            this.label1.Size = new System.Drawing.Size(128, 18);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Product to supply:\r\n";
+            this.label1.Text = "Supplier Product";
             // 
             // Product_comboBox
             // 
@@ -192,7 +192,7 @@ namespace PetWorldManagement
             this.insert_productSupply_BTN.BackColor = System.Drawing.Color.SlateBlue;
             this.insert_productSupply_BTN.FlatAppearance.BorderSize = 0;
             this.insert_productSupply_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.insert_productSupply_BTN.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insert_productSupply_BTN.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insert_productSupply_BTN.ForeColor = System.Drawing.SystemColors.Control;
             this.insert_productSupply_BTN.Location = new System.Drawing.Point(167, 241);
             this.insert_productSupply_BTN.Name = "insert_productSupply_BTN";
@@ -224,13 +224,13 @@ namespace PetWorldManagement
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label2.Location = new System.Drawing.Point(332, 212);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 20);
+            this.label2.Size = new System.Drawing.Size(45, 18);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Price:";
+            this.label2.Text = "Price";
             // 
             // panel1
             // 
@@ -279,6 +279,7 @@ namespace PetWorldManagement
             this.Controls.Add(this.txtContactEmail);
             this.Controls.Add(this.txtContactPhone);
             this.Controls.Add(this.btnInsert);
+            this.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AddSupplierForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

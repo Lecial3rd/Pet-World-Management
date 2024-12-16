@@ -2,6 +2,8 @@
 using PetWorldManagement.Appointments;
 using PetWorldManagement.Inventory;
 using PetWorldManagement.Repository;
+using PetWorldManagement.Repository.RepositoryFactoryMethod;
+using PetWorldManagement.Service;
 using PetWorldManagement.Stock;
 using PetWorldManagement.Supplier;
 using PetWorldManagement.Supplier.PurchaseOrder;
@@ -36,7 +38,13 @@ namespace PetWorldManagement
             }
             else if (typeof(T) == typeof(AppointmentObject))
             {
-                return new AppointmentRepository() as IRepository<T>;
+                return new InvoiceRepository() as IRepository<T>;
+            }else if(typeof(T) == typeof(ServiceObject))
+            {
+                return new ServiceRepository() as IRepository<T>;
+            }else if(typeof(T) == typeof(StaffObject))
+            {
+                return new StaffRepository() as IRepository<T>;
             }
 
             throw new NotImplementedException($"Repository for type {typeof(T).Name} not implemented.");

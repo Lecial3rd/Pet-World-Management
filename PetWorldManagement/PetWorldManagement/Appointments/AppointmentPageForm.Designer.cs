@@ -37,6 +37,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnAddService = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAppointmentList)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -45,29 +46,28 @@
             // 
             this.label2.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(16, 21);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(12, 17);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(209, 28);
+            this.label2.Size = new System.Drawing.Size(157, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Appointment";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SlateBlue;
-            this.panel1.Location = new System.Drawing.Point(17, 11);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Location = new System.Drawing.Point(13, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1133, 6);
+            this.panel1.Size = new System.Drawing.Size(850, 5);
             this.panel1.TabIndex = 14;
             // 
             // dataGridViewAppointmentList
             // 
             this.dataGridViewAppointmentList.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.dataGridViewAppointmentList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewAppointmentList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -76,26 +76,27 @@
             this.dataGridViewAppointmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewAppointmentList.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewAppointmentList.EnableHeadersVisualStyles = false;
-            this.dataGridViewAppointmentList.Location = new System.Drawing.Point(16, 203);
-            this.dataGridViewAppointmentList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridViewAppointmentList.Location = new System.Drawing.Point(12, 165);
+            this.dataGridViewAppointmentList.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridViewAppointmentList.Name = "dataGridViewAppointmentList";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewAppointmentList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridViewAppointmentList.RowHeadersVisible = false;
             this.dataGridViewAppointmentList.RowHeadersWidth = 51;
-            this.dataGridViewAppointmentList.Size = new System.Drawing.Size(1135, 555);
+            this.dataGridViewAppointmentList.Size = new System.Drawing.Size(851, 451);
             this.dataGridViewAppointmentList.TabIndex = 16;
             this.dataGridViewAppointmentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAppointmentList_CellContentClick);
             // 
@@ -104,22 +105,21 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.txtSearch);
-            this.panel5.Location = new System.Drawing.Point(15, 114);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel5.Location = new System.Drawing.Point(11, 93);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(441, 82);
+            this.panel5.Size = new System.Drawing.Size(331, 67);
             this.panel5.TabIndex = 28;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.Control;
-            this.label11.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(16, 30);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(12, 24);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 24);
+            this.label11.Size = new System.Drawing.Size(66, 20);
             this.label11.TabIndex = 24;
             this.label11.Text = "Search";
             // 
@@ -128,24 +128,38 @@
             this.txtSearch.BackColor = System.Drawing.SystemColors.Control;
             this.txtSearch.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtSearch.Location = new System.Drawing.Point(93, 23);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Location = new System.Drawing.Point(84, 19);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(320, 30);
+            this.txtSearch.Size = new System.Drawing.Size(227, 26);
             this.txtSearch.TabIndex = 5;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // btnAddService
+            // 
+            this.btnAddService.BackColor = System.Drawing.Color.SlateBlue;
+            this.btnAddService.FlatAppearance.BorderSize = 0;
+            this.btnAddService.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddService.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddService.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAddService.Location = new System.Drawing.Point(711, 133);
+            this.btnAddService.Name = "btnAddService";
+            this.btnAddService.Size = new System.Drawing.Size(152, 30);
+            this.btnAddService.TabIndex = 29;
+            this.btnAddService.Text = "+ Service";
+            this.btnAddService.UseVisualStyleBackColor = false;
+            this.btnAddService.Click += new System.EventHandler(this.btnAddService_Click);
+            // 
             // AppointmentPageForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1167, 773);
+            this.ClientSize = new System.Drawing.Size(875, 628);
+            this.Controls.Add(this.btnAddService);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.dataGridViewAppointmentList);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AppointmentPageForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AppointmentPageForm";
@@ -164,5 +178,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnAddService;
     }
 }

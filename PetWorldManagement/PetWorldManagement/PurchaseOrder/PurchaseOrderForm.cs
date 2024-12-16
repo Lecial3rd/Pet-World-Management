@@ -51,7 +51,7 @@ namespace PetWorldManagement.Supplier
 
             if (supplierLabel != null)
             {
-                supplierLabel.Text = row["SupplierName"].ToString();
+                supplierLabel.Text = row["Name"].ToString();
             }
 
             supplyOrderCard.Tag = row["SupplierID"];

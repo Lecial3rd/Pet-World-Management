@@ -63,6 +63,12 @@ namespace PetWorldManagement.Inventory
 
         }
 
+
+        private void btnViewLog_Click(object sender, EventArgs e)
+        {
+            dashboard.LoadForm(new InventoryLogForm());
+        }
+
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             string searchTerm = txtSearch.Text.ToLower();
@@ -75,11 +81,6 @@ namespace PetWorldManagement.Inventory
                     userControl.Visible = isVisible;
                 }
             }
-        }
-
-        private void btnViewLog_Click(object sender, EventArgs e)
-        {
-            dashboard.LoadForm(new InventoryLogForm());
         }
     }
 }

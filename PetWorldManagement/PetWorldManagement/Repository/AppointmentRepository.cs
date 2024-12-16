@@ -127,7 +127,7 @@
             DataTable dt = new DataTable();
             using (SqlConnection conn = DatabaseConn.getInstance().GetConnection())
             {
-                string query = "SELECT StaffID, CONCAT(firstName, ' ', lastName) AS FullName FROM Staff WHERE RoleID = 4";
+                string query = "SELECT StaffID, CONCAT(firstName, ' ', lastName) AS FullName FROM Staff WHERE RoleID = 3";
                 SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                 adapter.Fill(dt);
             }
@@ -146,26 +146,31 @@
                 return dt;
             }
 
-            public void AddAppointmentService(int appointmentId, int serviceId, int quantity, decimal totalAmount)
+        public void AddAppointmentService(int appointmentId, int serviceId, string serviceName, decimal price, int quantity, decimal totalAmount)
+        {
+            using (SqlConnection conn = DatabaseConn.getInstance().GetConnection())
             {
-                using (SqlConnection conn = DatabaseConn.getInstance().GetConnection())
+                string query = "INSERT INTO AppointmentService (AppointmentID, ServiceID, ServiceName, Price, Quantity, TotalAmount) " +
+                               "VALUES (@AppointmentID, @ServiceID, @ServiceName, @Price, @Quantity, @TotalAmount)";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    string query = "INSERT INTO AppointmentService (AppointmentID, ServiceID, Quantity, TotalAmount) VALUES (@AppointmentID, @ServiceID, @Quantity, @TotalAmount)";
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@AppointmentID", appointmentId);
-                        cmd.Parameters.AddWithValue("@ServiceID", serviceId);
-                        cmd.Parameters.AddWithValue("@Quantity", quantity);
-                        cmd.Parameters.AddWithValue("@TotalAmount", totalAmount);
+                    cmd.Parameters.AddWithValue("@AppointmentID", appointmentId);
+                    cmd.Parameters.AddWithValue("@ServiceID", serviceId);
+                    cmd.Parameters.AddWithValue("@ServiceName", serviceName); // Include ServiceName
+                    cmd.Parameters.AddWithValue("@Price", price); // Include Price
+                    cmd.Parameters.AddWithValue("@Quantity", quantity);
+                    cmd.Parameters.AddWithValue("@TotalAmount", totalAmount);
 
-                        conn.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        Console.WriteLine($"Rows affected: {rowsAffected}"); // Log the number of rows affected
-                    }
+                    conn.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    Console.WriteLine($"Rows affected: {rowsAffected}"); // Log the number of rows affected
                 }
             }
+        }
 
-            public int GetLastInsertedAppointmentId()
+
+
+        public int GetLastInsertedAppointmentId()
             {
                 int lastId = 0;
                 string query = "SELECT TOP 1 AppointmentID FROM Appointment ORDER BY AppointmentID DESC"; // Adjust the table name and column name as necessary
@@ -256,11 +261,11 @@
             using (SqlConnection conn = DatabaseConn.getInstance().GetConnection())
             {
                 string query = @"
-            SELECT appointmentService.ServiceID, s.ServiceName, appointmentService.Quantity, 
-                   appointmentService.TotalAmount, s.Price
-            FROM AppointmentService appointmentService
-            JOIN Services s ON appointmentService.ServiceID = s.ServiceID
-            WHERE appointmentService.AppointmentID = @AppointmentID";
+                            SELECT appointmentService.ServiceID, appointmentService.ServiceName, appointmentService.Quantity, 
+                                   appointmentService.TotalAmount, appointmentService.Price
+                            FROM AppointmentService appointmentService
+                            JOIN Services s ON appointmentService.ServiceID = s.ServiceID
+                            WHERE appointmentService.AppointmentID = @AppointmentID";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@AppointmentID", appointmentId);
@@ -333,9 +338,9 @@
             using (SqlConnection conn = DatabaseConn.getInstance().GetConnection())
             {
                 string query = @"
-            SELECT s.StaffID, s.lastName, s.firstName, s.mi 
-            FROM Staff s 
-            WHERE s.StaffID = @StaffID AND s.RoleID = 2"; // Ensure StaffID is selected
+                            SELECT s.StaffID, s.lastName, s.firstName, s.mi 
+                            FROM Staff s 
+                            WHERE s.StaffID = @StaffID AND s.RoleID = 1"; // Ensure StaffID is selected
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@StaffID", staffId);
@@ -352,9 +357,9 @@
             using (SqlConnection conn = DatabaseConn.getInstance().GetConnection())
             {
                 string query = @"
-        INSERT INTO SalesTransactions (StaffID, TotalQuantitySold, TotalPrice, DiscountRate, PaymentMethod, Change)
-        OUTPUT INSERTED.TransactionID
-        VALUES (@StaffID, @TotalQuantitySold, @TotalPrice, @DiscountRate, @PaymentMethod, @Change)";
+                            INSERT INTO SalesTransactions (StaffID, TotalQuantitySold, TotalPrice, DiscountRate, PaymentMethod, Change)
+                            OUTPUT INSERTED.TransactionID
+                            VALUES (@StaffID, @TotalQuantitySold, @TotalPrice, @DiscountRate, @PaymentMethod, @Change)";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -428,6 +433,5 @@
             }
             return invoiceTable;
         }
-
     }
-    }
+}

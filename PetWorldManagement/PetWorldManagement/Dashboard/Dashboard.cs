@@ -1,5 +1,6 @@
 ﻿using PetWorldManagement.Appointments;
 using PetWorldManagement.Inventory;
+using PetWorldManagement.StartUp;
 using PetWorldManagement.Supplier;
 using PetWorldManagement.Supplier.OrderList;
 using System;
@@ -12,6 +13,7 @@ namespace PetWorldManagement
         public Dashboard()
         {
             InitializeComponent();
+            LoadForm(new Overview.OverviewForm());
         }
 
         public void LoadForm(object formObj)
@@ -34,7 +36,7 @@ namespace PetWorldManagement
 
         private void dashboard_btn_Click(object sender, EventArgs e)
         {
-
+            LoadForm(new Overview.OverviewForm());
         }
 
         private void appointmentList_btn_Click(object sender, EventArgs e)
@@ -79,17 +81,22 @@ namespace PetWorldManagement
 
         private void Sales_btn_Click(object sender, EventArgs e)
         {
-
+            LoadForm(new Sales.SalesForm());
         }
 
         private void Invoice_btn_Click(object sender, EventArgs e)
         {
-
+            LoadForm(new Invoice.Invoice());
         }
 
         private void btn_Staff_Click(object sender, EventArgs e)
         {
+            LoadForm(new Staff.StaffForm());
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

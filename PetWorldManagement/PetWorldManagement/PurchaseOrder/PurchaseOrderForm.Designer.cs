@@ -65,23 +65,25 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(784, 5);
+            this.label1.Location = new System.Drawing.Point(775, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 23);
+            this.label1.Size = new System.Drawing.Size(72, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Action";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelCategoryName
             // 
-            this.labelCategoryName.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCategoryName.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategoryName.ForeColor = System.Drawing.SystemColors.Control;
             this.labelCategoryName.Location = new System.Drawing.Point(341, 5);
             this.labelCategoryName.Name = "labelCategoryName";
-            this.labelCategoryName.Size = new System.Drawing.Size(62, 23);
+            this.labelCategoryName.Size = new System.Drawing.Size(88, 23);
             this.labelCategoryName.TabIndex = 2;
             this.labelCategoryName.Text = "Supplier";
+            this.labelCategoryName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
@@ -124,11 +126,11 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.SystemColors.Control;
-            this.label11.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Arial Black", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.label11.Location = new System.Drawing.Point(12, 24);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 20);
+            this.label11.Size = new System.Drawing.Size(59, 18);
             this.label11.TabIndex = 24;
             this.label11.Text = "Search";
             // 
@@ -137,9 +139,9 @@
             this.txtSearch.BackColor = System.Drawing.SystemColors.Control;
             this.txtSearch.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.txtSearch.Location = new System.Drawing.Point(70, 19);
+            this.txtSearch.Location = new System.Drawing.Point(84, 19);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(241, 26);
+            this.txtSearch.Size = new System.Drawing.Size(227, 26);
             this.txtSearch.TabIndex = 5;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 

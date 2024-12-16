@@ -239,7 +239,6 @@ namespace PetWorldManagement.POS
 
             totalPrice.Text = "₱" + toPrice.ToString("N2");
 
-
         }
 
         private void btnAll_Click(object sender, EventArgs e)
@@ -249,22 +248,22 @@ namespace PetWorldManagement.POS
 
         private void btnGrooming_Click(object sender, EventArgs e)
         {
-            AddProductToLayout(1);
+            AddProductToLayout(3);
         }
 
         private void btnAccessories_Click(object sender, EventArgs e)
         {
-            AddProductToLayout(2);
+            AddProductToLayout(4);
         }
 
         private void btnToys_Click(object sender, EventArgs e)
         {
-            AddProductToLayout(3);
+            AddProductToLayout(1);
         }
 
         private void btnFoods_Click(object sender, EventArgs e)
         {
-            AddProductToLayout(4);
+            AddProductToLayout(2);
         }
 
 
@@ -362,7 +361,11 @@ namespace PetWorldManagement.POS
 
         private void btnPay_Click(object sender, EventArgs e)
         {
-           
+            if (!productLayout.Controls.OfType<ProductControl>().Any())
+            {
+                MessageBox.Show("No Products Added. Please Order first.");
+                return;
+            }
 
             double TPrice;
             if (!double.TryParse(totalPrice.Text.Replace("₱", ""), out TPrice))
@@ -517,7 +520,7 @@ namespace PetWorldManagement.POS
                                 MessageBox.Show("Your Payment is Successful!");
                                 productLayout.Controls.Clear();
                                 UpdatePrice();
-                                DisplayInvoice(invoiceId, submitAmount, change);
+                                DisplayInvoice(invoiceId);
                             }
                             catch (Exception ex)
                             {
@@ -545,10 +548,11 @@ namespace PetWorldManagement.POS
             {
                 MessageBox.Show("Invalid Payment!");
             }
-
+            AddProductToLayout();
+            
         }
 
-        private void DisplayInvoice(int InvoiceID, double submitAmount, double change)
+        private void DisplayInvoice(int InvoiceID)
         {
             InvoiceForm invoiceDisplay = new InvoiceForm();
             double FinalTotal = 0;
@@ -560,19 +564,23 @@ namespace PetWorldManagement.POS
                     conn.Open();
 
                 string query = @"Select
-                                        i.InvoiceID, 
-                                        i.InvoiceDate, 
-                                        s.ProductID, 
-                                        s.ProductName,
-                                        s.QuantitySold,
-                                        s.ItemPrice,
-                                        (s.QuantitySold * s.ItemPrice) as SubTotal,
-                                        i.TotalAmount, st.DiscountRate
-                                From Sales s 
-                                Inner join  SalesItems si on si.SaleID = s.SaleID
-                                Inner join Invoices i on i.TransactionID = si.TransactionID
-                                Inner join SalesTransactions st on st.TransactionID = i.TransactionID
-                                where i.InvoiceID = @InvoiceID";
+                                i.InvoiceID, 
+                                i.InvoiceDate, 
+                                s.ProductID, 
+                                s.ProductName,
+                                s.QuantitySold,
+                                s.ItemPrice,
+                                (s.QuantitySold * s.ItemPrice) as SubTotal,
+                                i.TotalAmount, 
+                                st.DiscountRate,
+                                st.Change,
+                                (st.Change + i.TotalAmount) as Amount,
+		                        st.PaymentMethod
+                        From Sales s 
+                        Inner join  SalesItems si on si.SaleID = s.SaleID
+                        Inner join Invoices i on i.TransactionID = si.TransactionID
+                        Inner join SalesTransactions st on st.TransactionID = i.TransactionID
+                        where i.InvoiceID = @InvoiceID";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -580,26 +588,29 @@ namespace PetWorldManagement.POS
 
                     using (SqlDataReader reader = cmd.ExecuteReader())
                     {
-
                         bool isInvoiceDetailsFetched = false;
 
                         while (reader.Read())
                         {
                             if (!isInvoiceDetailsFetched)
                             {
-
                                 invoiceDisplay.lblInvoiceID.Text = reader.GetInt32(0).ToString();
                                 invoiceDisplay.lblInvoiceDate.Text = reader.GetDateTime(1).ToString("MMMM dd, yyyy");
                                 decimal totalAmount = reader.GetDecimal(7);
                                 decimal discountrate = reader.GetDecimal(8);
+                                decimal dbChange = reader.GetDecimal(9);
+                                decimal amount = reader.GetDecimal(10);
+                                string paymentMethod = reader.GetString(11);
+
                                 invoiceDisplay.lblDR.Text = discountrate.ToString();
-                                invoiceDisplay.lblTAmount.Text = totalAmount.ToString("F2");
-                                invoiceDisplay.cshrcvlbl.Text = submitAmount.ToString("F2");
-                                invoiceDisplay.changelbl.Text = change.ToString("F2");
+                                invoiceDisplay.lblTAmount.Text = totalAmount.ToString("N2");
+                                invoiceDisplay.cshrcvlbl.Text = amount.ToString("N2");
+                                invoiceDisplay.changelbl.Text = dbChange.ToString("N2");
+                                invoiceDisplay.paymentMethod.Text = paymentMethod;
+
                                 invoiceDisplay.lblTAmount.Visible = true;
                                 isInvoiceDetailsFetched = true;
                             }
-
 
                             int productID = reader.GetInt32(2);
                             string productName = reader.GetString(3);
@@ -609,15 +620,12 @@ namespace PetWorldManagement.POS
 
                             FinalTotal += (double)subtotal;
 
-
                             InvoiceLayout invoiceItemLayout = new InvoiceLayout();
-                            invoiceItemLayout.ShowInvoiceLayout(productName, (int)itemPrice, quantity, (double)subtotal);
+                            InvoiceForm invoiceForm = new InvoiceForm();
+                            invoiceItemLayout.ShowInvoiceLayout(productName, itemPrice, quantity, (double)subtotal);
                             invoiceDisplay.InvoiceFlowLayout.Controls.Add(invoiceItemLayout);
-
-
+                            invoiceDisplay.InvoiceFlowLayout.Controls.Add(invoiceDisplay.summaryPNL);
                         }
-
-
                     }
                 }
             }
@@ -627,11 +635,9 @@ namespace PetWorldManagement.POS
             }
             finally
             {
-
                 if (conn.State == ConnectionState.Open)
                     conn.Close();
             }
-
 
             invoiceDisplay.Show();
         }
@@ -705,6 +711,12 @@ namespace PetWorldManagement.POS
                 if (conn.State == ConnectionState.Open)
                     conn.Close();
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
         }
     }
 }

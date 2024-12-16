@@ -41,7 +41,7 @@ namespace PetWorldManagement
         private void setColumn()
         {
             // Add DeleteAction button column
-            this.DeleteAction.Name = "DeleteAction";
+            this.DeleteAction.Name = "Delete";
             this.DeleteAction.HeaderText = "Action";
             this.DeleteAction.Text = "DELETE";
             this.DeleteAction.UseColumnTextForButtonValue = true; // Display "Delete" as the button text
@@ -53,7 +53,7 @@ namespace PetWorldManagement
 
         private void dataGridViewSuppliers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == dataGridViewSuppliers.Columns["DeleteAction"].Index)
+            if (e.ColumnIndex == dataGridViewSuppliers.Columns["Delete"].Index)
             {
                 int supplierID = Convert.ToInt32(dataGridViewSuppliers.Rows[e.RowIndex].Cells["SupplierID"].Value);
                 DeleteSupplier(supplierID);
@@ -89,11 +89,11 @@ namespace PetWorldManagement
             {
                 // Assuming the DataGridView columns match your Supplier properties
                 int supplierId = Convert.ToInt32(dataGridViewSuppliers.Rows[rowIndex].Cells["SupplierID"].Value);
-                string supplierName = dataGridViewSuppliers.Rows[rowIndex].Cells["SupplierName"].Value.ToString();
+                string supplierName = dataGridViewSuppliers.Rows[rowIndex].Cells["Name"].Value.ToString();
                 string address = dataGridViewSuppliers.Rows[rowIndex].Cells["Address"].Value.ToString();
                 string contactPerson = dataGridViewSuppliers.Rows[rowIndex].Cells["ContactPerson"].Value.ToString();
-                string contactEmail = dataGridViewSuppliers.Rows[rowIndex].Cells["ContactEmail"].Value.ToString();
-                string contactPhone = dataGridViewSuppliers.Rows[rowIndex].Cells["ContactPhone"].Value.ToString();
+                string contactEmail = dataGridViewSuppliers.Rows[rowIndex].Cells["Email"].Value.ToString();
+                string contactPhone = dataGridViewSuppliers.Rows[rowIndex].Cells["Phone No."].Value.ToString();
 
                 // Create a Supplier object with updated values
                 SupplierObject updatedSupplier = new SupplierObject

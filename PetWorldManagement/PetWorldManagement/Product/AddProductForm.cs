@@ -32,7 +32,7 @@ namespace PetWorldManagement
         public void SetProductData(DataGridViewRow row)
         {
             productID = Convert.ToInt32(row.Cells["ProductID"].Value);
-            txtProductName.Text = row.Cells["ProductName"].Value.ToString();
+            txtProductName.Text = row.Cells["Product Name"].Value.ToString();
             txtPrice.Text = row.Cells["Price"].Value.ToString();
             comboCategory.SelectedValue = row.Cells["CategoryID"].Value;
             txtDescription.Text = row.Cells["Description"].Value.ToString();

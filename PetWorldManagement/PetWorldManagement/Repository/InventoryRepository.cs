@@ -105,23 +105,23 @@ namespace PetWorldManagement.Repository
         public void Add(InventoryObject entity)
         {
             string query = @"
-                        INSERT INTO Inventory (SupplierID, ProductID, QuantityReceived, DateDelivery, DateReceived, DateExpiration, StockID, StatusID, Price, ProductName, SupplierName)
-                        SELECT 
-                            @SupplierID, 
-                            @ProductID, 
-                            @QuantityReceived, 
-                            @DateDelivery, 
-                            @DateReceived, 
-                            @DateExpiration, 
-                            @StockID, 
-                            @StatusID, 
-                            @Price,
-                            p.ProductName,  -- Capture ProductName at time of insertion
-                            s.SupplierName  -- Capture SupplierName at time of insertion
-                        FROM Products p
-                        JOIN Suppliers s ON s.SupplierID = @SupplierID
-                        WHERE p.ProductID = @ProductID;
-                        ";
+                INSERT INTO Inventory (SupplierID, ProductID, QuantityReceived, DateDelivery, DateReceived, DateExpiration, StockID, StatusID, Price, ProductName, SupplierName)
+                SELECT 
+                    @SupplierID, 
+                    @ProductID, 
+                    @QuantityReceived, 
+                    @DateDelivery, 
+                    @DateReceived, 
+                    @DateExpiration, 
+                    @StockID, 
+                    @StatusID, 
+                    @Price,
+                    p.ProductName,  -- Capture ProductName at time of insertion
+                    s.SupplierName  -- Capture SupplierName at time of insertion
+                FROM Products p
+                JOIN Suppliers s ON s.SupplierID = @SupplierID
+                WHERE p.ProductID = @ProductID;
+                ";
 
             using (SqlConnection conn = DatabaseConn.getInstance().GetConnection())
             {
@@ -132,10 +132,13 @@ namespace PetWorldManagement.Repository
                     cmd.Parameters.AddWithValue("@SupplierID", entity.SupplierID);
                     cmd.Parameters.AddWithValue("@ProductID", entity.ProductID);
                     cmd.Parameters.AddWithValue("@QuantityReceived", entity.QtyReceived);
-                    cmd.Parameters.AddWithValue("@DateDelivery", (object)entity.DateDelivery ?? DBNull.Value);
-                    cmd.Parameters.AddWithValue("@DateReceived", (object)entity.DateReceived ?? DBNull.Value);
-                    cmd.Parameters.AddWithValue("@DateExpiration", (object)entity.DateExpiration ?? DBNull.Value);
-                    cmd.Parameters.AddWithValue("@StockID", entity.StockID); // Ensure StockID is passed correctly
+
+                    // Explicitly set the parameter types for date values
+                    cmd.Parameters.Add("@DateDelivery", SqlDbType.DateTime).Value = (object)entity.DateDelivery ?? DBNull.Value;
+                    cmd.Parameters.Add("@DateReceived", SqlDbType.DateTime).Value = (object)entity.DateReceived ?? DBNull.Value;
+                    cmd.Parameters.Add("@DateExpiration", SqlDbType.DateTime).Value = (object)entity.DateExpiration ?? DBNull.Value;
+
+                    cmd.Parameters.AddWithValue("@StockID", entity.StockID);
                     cmd.Parameters.AddWithValue("@StatusID", entity.StatusID);
                     cmd.Parameters.AddWithValue("@Price", entity.Price);
 
